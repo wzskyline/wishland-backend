@@ -1,0 +1,40 @@
+@import "../common/custom";
+@import "../common/animation";
+@import "../common/component";
+
+@import "../layout/layout-1";
+
+@import "../resources/app";
+
+@import "../resources/home";
+@import "../resources/login";
+@import "../resources/example/example1";
+@import "../resources/live/live";
+@import "../resources/live/live_list";
+@import "../resources/live/member_statistics";
+@import "../resources/live/member_configuration";
+@import "../resources/live/gift_configuration";
+@import "../resources/live/live_room";
+@import "../resources/live/live_control";
+@import "../resources/live/live_monitor";
+@import "../resources/live/live_inquire";
+@import "../resources/live/gift_recording";
+@import "../resources/live/live_status_monitor";
+@import "../resources/live/announcement_management";
+@import "../resources/sgl818/member_manage";
+@import "../resources/sgl818/announcement";
+@import "../resources/system/syscount_manage";
+@import "../resources/game_playing/game_playing";
+
+@import "../resources/core";
+
+#version {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgba(#FFFFFF, 0.8);
+}
+
+.ui-th-div {
+    text-align: center
+}

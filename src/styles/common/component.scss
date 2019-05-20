@@ -1,0 +1,380 @@
+
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../resources/Poppins-Regular.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('../resources/Poppins-Medium.ttf');
+}
+
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('../resources/Poppins-Bold.ttf');
+}
+
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../resources/Poppins-SemiBold.ttf');
+}
+
+
+input {
+	outline: none;
+	border: none;
+}
+
+.loading_wrap{
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 100%; height: 100%;
+	opacity: 0;
+	z-index: -100;
+	@include transition(all 400ms);
+	
+	&.active{
+		opacity: 1;
+		z-index: 100;
+	}
+	
+	.loader-1{
+		position: absolute;
+		top: calc(50% - 32px); left: calc(50% - 32px);
+		width: 64px; height: 64px;
+		background: url("../images/ajax-loader-1.gif") no-repeat;
+	}
+	
+	.loader-2{
+		position: absolute;
+		top: calc(50% - 10px); left: calc(50% - 110px);
+		width: 220px; height: 19px;
+		background: url("../images/ajax-loader-2.gif") no-repeat;
+	}
+}
+
+.page-title{
+	
+	.btn.btn-app{
+		height: 47px;
+		margin: 0px 0px 5px 5px;
+		padding: 5px;
+		
+		&.processing{
+			pointer-events: none;
+			opacity: 0.5;
+		}
+	}
+}
+
+/**
+ * jqGrid
+ */
+.ui-jqgrid{
+	margin: 0px auto;
+}
+	
+/**
+ * daterangepicker
+ */
+.daterangepicker {
+	.ranges {
+		li {
+			color: #73879C;
+			
+			&.active, &:hover {
+				background: #536A7F;
+				border: 1px solid #536A7F;
+				color: #fff;
+			}
+		}
+	}
+	
+	.input-mini {
+		background-color: #eee;
+		border: 1px solid #ccc;
+		box-shadow: none !important;
+		
+		&.active {
+			border: 1px solid #ccc;
+		}
+	}
+	
+	select {
+		&.monthselect,
+		&.yearselect,
+		&.hourselect,
+		&.minuteselect,
+		&.secondselect,
+		&.ampmselect {
+			font-size: 12px;
+			padding: 1px;
+			height: auto;
+			margin: 0;
+			cursor: default;
+			height: 30px;
+			border: 1px solid #ADB2B5;
+			line-height: 30px;
+			border-radius: 0px !important;
+		}
+		
+		&.monthselect {
+			margin-right: 2%;
+		}
+	}
+	
+	td {
+		&.in-range {
+			background: #E4E7EA;
+			color: #73879C;
+		}
+		
+		&.active, &.active:hover {
+			background-color: #536A7F;
+			color: #fff;
+		}
+	}
+	
+	th.available:hover {
+		background: #eee;
+		color: #34495E;
+	}
+	
+	&:before, &:after {
+		content: none;
+	}
+	
+	.calendar.single {
+		margin: 0 0 4px 0;
+		
+		.calendar-table {
+			width: 224px;
+			padding: 0 0 4px 0 !important;
+			
+			thead {
+				& tr:first-child {
+					th {
+						padding: 8px 5px;
+					}
+				}
+				
+				th {
+					border-radius: 0;
+				}
+			}
+		}
+	}
+	
+	&.picker_1 {
+		color: #fff;
+		background: #34495E;
+		
+		.calendar-table {
+			background: #34495E;
+			
+			thead {
+				& tr {
+					background: #213345;
+				}
+				
+				& tr:first-child {
+					background: #1ABB9C;
+				}
+			}
+			
+			td.off {
+				background: #34495E;
+				color: #999;
+			}
+			
+			td.available:hover {
+				color: #34495E;
+			}
+		}
+	}
+	
+	&.picker_2 {
+		.calendar-table {
+			thead {
+				& tr {
+					color: #1ABB9C;
+				}
+				
+				& tr:first-child {
+					color: #73879C;
+				}
+			}
+		}
+	}
+	
+	&.picker_3 {
+		.calendar-table {
+			thead {
+				& tr:first-child {
+					color: #fff;
+					background: #1ABB9C;
+				}
+			}
+		}
+	}
+	
+	&.picker_4 {
+		.calendar-table {
+			thead {
+				& tr:first-child {
+					color: #fff;
+					background: #34495E;;
+				}
+			}
+			
+			td, td.off  {
+				background: #ECF0F1;
+				border: 1px solid #fff;
+				border-radius: 0;
+			}
+			
+			td.active {
+				background: #34495E;
+			}
+		}
+	}
+}
+
+.calendar-exibit {
+	.show-calendar {
+		float: none;
+		display: block;
+		position: relative;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		margin-bottom: 20px;
+		border: 1px solid rgba(0,0,0,0.15);
+		overflow: hidden;
+		
+		.calendar {
+			margin: 0 0 4px 0;
+		}
+		
+		&.picker_1 {
+			background: #34495E;
+		}
+	}
+	
+	.calendar-table {
+		padding: 0 0 4px 0;
+	}
+}
+
+.x_content{
+  overflow-x: auto;
+}
+
+// 棋牌房间游戏图像
+$level-sprite-icon-list:(
+
+				v1_color_car:	(width:20px, height:20px, position:-19px -230px),	// 彩钻（颜色代表所有的颜色）
+				v1_gold_car:	(width:20px, height:20px, position:-19px -152px),	// 黄钻(金色代表黄钻)
+				v1_red_car:		(width:20px, height:20px, position:-19px -191px),	// 红钻
+				v2_color_car:	(width:20px, height:20px, position:-58px -230px),
+				v2_gold_car:	(width:20px, height:20px, position:-58px -152px),
+				v2_red_car:		(width:20px, height:20px, position:-58px -191px),
+				v3_color_car:	(width:20px, height:20px, position:-95px -230px),
+				v3_gold_car:	(width:20px, height:20px, position:-95px -152px),
+				v3_red_car:		(width:20px, height:20px, position:-95px -191px),
+				v4_color_car:	(width:20px, height:20px, position:-134px -230px),
+				v4_gold_car:	(width:20px, height:20px, position:-134px -152px),
+				v4_red_car:		(width:20px, height:20px, position:-134px -191px),
+				v5_color_car:	(width:20px, height:20px, position:-170px -230px),
+				v5_gold_car:	(width:20px, height:20px, position:-170px -152px),
+				v5_red_car:		(width:20px, height:20px, position:-170px -191px),
+				v6_color_car:	(width:27px, height:20px, position:-210px -230px),
+				v6_gold_car:	(width:27px, height:20px, position:-210px -152px),
+				v6_red_car:		(width:27px, height:20px, position:-210px -191px),
+				broadcast:		(width:20px, height:20px, position:-204px -276px),
+				song: 			(width:20px, height:20px, position:-242px -276px),
+
+);
+.level_logo{
+	background-image: url("../../images/live/spriter.png");
+
+	@each $label, $list in $level-sprite-icon-list {
+		&[data-level=#{$label}]{
+			width: map_get($list, width); height: map_get($list, height);
+			background-position: map_get($list, position);
+		}
+	}
+}
+
+#messageModal{
+
+	.statusBox{
+		width: 100%;
+		height: 100px;
+		text-align: center;
+	}
+
+	.modal-dialog{
+		position: absolute;
+		left: 50%;
+		margin-left: -300px;
+		top: 50%;
+		margin-top: -250px;
+
+		.messagetBox{
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+		.modal-footer{
+			text-align: center;
+			button{
+				width: 157px;
+				height: 40px;
+				margin: 0 62px;
+			}
+		}
+	}
+}
+
+.video-js{
+	.vjs-error-display::before{ content: '' !important; }
+	.vjs-loading-spinner{ z-index: 100; }
+	.vjs-errors-dialog{
+		border: none;
+		background: transparent;
+
+		.vjs-errors-ok-button-container,
+		.vjs-close-button{ display: none; }
+		.vjs-errors-content-container{
+
+			&>div{ display: none; }
+			.vjs-errors-headline{
+				display: none;
+			}
+			.vjs-errors-details{ 
+
+				width: 100%;
+				height: 24px;
+				line-height: 24px;
+				display: block; 
+				position: absolute;
+				left: 0;
+				bottom: 22%;
+				text-align: center;
+
+				.vjs-errors-message{
+					display: inline-block;
+					background-color: transparent;
+					border: none;
+					margin: 0;
+					padding: 0;
+					vertical-align: bottom;
+				}
+			}
+		}
+		
+	}
+}

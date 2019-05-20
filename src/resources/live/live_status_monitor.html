@@ -1,0 +1,207 @@
+<script id="live_live_status_monitor_template" type="text/template">
+    <div id="live_live_status_monitor">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>主播状态监控</h3>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel" style="min-width: 1408px;">
+                            <div style="text-align: center;font-size: 30px;font-weight: bold;">待开发</div>
+                            <ul class="room_tabs" data-name="roo_tabs" style="display: none;"><li>sss</li></ul>
+                            <!--  视讯区 -->
+                            <div class="live_body clearfix" style="display: none;">
+
+                                <!-- 视讯区 -->
+                                <div class="left_live_content ">
+                                    <div class="live_user clearfix">
+                                        <div class="user_img">
+                                            <img src="../../images/live/user_img.png" data-name="user_img" alt="主播头像">
+                                        </div>
+                                        <div class="user_message">
+                                            <span data-name="user_nickName"></span>
+                                            <span data-name="user_number"></span>
+                                            <span>礼物收益(直播币)：<strong data-name="game_money"></strong></span>
+                                            <span>礼物收益(真钱)：<strong data-name="real_money"></strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="audience_live_content" data-name="video"></div>
+                                </div>
+
+                                <!-- 群众信息管理区 -->
+                                <div class="audience_message" style="margin-left:30px;">
+                                    <h3 class="title">观众发言</h3>
+                                    <div class="message_content" data-name="theMassesMessage">
+                                        <ul data-name="message_list">
+                                            <!-- <li class="goInit">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v1_color_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v2_color_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>李易峰</strong>
+                                                <span>进入房间</span>
+                                                <div class="init_img">
+                                                    <img src="../../images/live/level/v6-gold-car.png">
+                                                </div>
+                                            </li>
+                                            <li class="goInit">
+                                                <time>14:21:00</time>
+                                                <i class="level_logo" data-level="v6_gold_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_red_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>胡歌</strong>
+                                                <span>进入房间</span>
+                                                <div class="init_img">
+                                                    <img src="../../images/live/level/v6-color-car.png">
+                                                </div>
+                                            </li>
+                                            <li class="song">
+                                                <time>14:21:00</time>
+                                                <i class="level_logo" data-level="song"></i>
+                                                <strong>胡歌</strong>
+                                                <span>点了一首歌，请主播MM献唱哦！~</span>
+                                            </li>
+                                            <li class="update">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="update"></i>
+                                                <span>恭喜</span>
+                                                <strong>周杰伦</strong>
+                                                <span>等级升至 <i class="level_logo" data-level="v4_gold_car"></i> 主播更爱你</span>
+                                            </li>
+                                            <li class="">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>周杰伦</strong>
+                                                <span>送出蛋糕 x 100</span>
+                                                <span class="gift">
+                                                    <img src="../../images/live/gift/level2-steak.png">
+                                                </span>
+                                            </li>
+                                            <li class="">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>周杰伦</strong>
+                                                <span>主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！</span>
+                                            </li>
+
+
+                                            <li class="goInit">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v1_color_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v2_color_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>李易峰</strong>
+                                                <span>进入房间</span>
+                                                <div class="init_img">
+                                                    <img src="../../images/live/level/v6-gold-car.png">
+                                                </div>
+                                            </li>
+                                            <li class="goInit">
+                                                <time>14:21:00</time>
+                                                <i class="level_logo" data-level="v6_gold_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_red_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>胡歌</strong>
+                                                <span>进入房间</span>
+                                                <div class="init_img">
+                                                    <img src="../../images/live/level/v6-color-car.png">
+                                                </div>
+                                            </li>
+                                            <li class="song">
+                                                <time>14:21:00</time>
+                                                <i class="level_logo" data-level="song"></i>
+                                                <strong>胡歌</strong>
+                                                <span>点了一首歌，请主播MM献唱哦！~</span>
+                                            </li>
+                                            <li class="update">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="update"></i>
+                                                <span>恭喜</span>
+                                                <strong>周杰伦</strong>
+                                                <span>等级升至 <i class="level_logo" data-level="v4_gold_car"></i> 主播更爱你</span>
+                                            </li>
+                                            <li class="">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>周杰伦</strong>
+                                                <span>送出蛋糕 x 100</span>
+                                                <span class="gift">
+                                                    <img src="../../images/live/gift/level2-steak.png">
+                                                </span>
+                                            </li>
+                                            <li class="">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>周杰伦</strong>
+                                                <span>主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！</span>
+                                            </li>
+                                            <li class="goInit">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v1_color_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v2_color_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>李易峰</strong>
+                                                <span>进入房间</span>
+                                                <div class="init_img">
+                                                    <img src="../../images/live/level/v6-gold-car.png">
+                                                </div>
+                                            </li>
+                                            <li class="goInit">
+                                                <time>14:21:00</time>
+                                                <i class="level_logo" data-level="v6_gold_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_red_car"></i>&lt;!&ndash;
+                                                &ndash;&gt;<i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>胡歌</strong>
+                                                <span>进入房间</span>
+                                                <div class="init_img">
+                                                    <img src="../../images/live/level/v6-color-car.png">
+                                                </div>
+                                            </li>
+                                            <li class="song">
+                                                <time>14:21:00</time>
+                                                <i class="level_logo" data-level="song"></i>
+                                                <strong>胡歌</strong>
+                                                <span>点了一首歌，请主播MM献唱哦！~</span>
+                                            </li>
+                                            <li class="update">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="broadcast"></i>
+                                                <span>恭喜</span>
+                                                <strong>周杰伦</strong>
+                                                <span>等级升至 <i class="level_logo" data-level="v4_gold_car"></i> 主播更爱你</span>
+                                            </li>
+                                            <li class="">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>周杰伦</strong>
+                                                <span>送出蛋糕 x 100</span>
+                                                <span class="gift">
+                                                    <img src="../../images/live/gift/level2-steak.png">
+                                                </span>
+                                            </li>
+                                            <li class="">
+                                                <time>14:20:00</time>
+                                                <i class="level_logo" data-level="v6_color_car"></i>
+                                                <strong>周杰伦</strong>
+                                                <span>主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！主播很赞很漂亮很美大爱！</span>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+    </div>
+</script>

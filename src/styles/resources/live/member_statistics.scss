@@ -1,0 +1,192 @@
+@import "compass/css3";
+
+#live_member_statistics {
+    .page-content {
+        overflow-y: auto;
+    }
+
+    .x_panel {
+        padding-bottom: 50px;
+        min-width: 1408px;
+    }
+
+    .navbar-nav {
+
+        li {
+
+            &:hover,
+            &.active {
+
+                a {
+                    font-weight: bold;
+                    color: #0ba3f7 !important;
+
+                }
+            }
+
+            a {
+                padding: 0 20px;
+
+            }
+        }
+    }
+
+    .table-box {
+        position: relative;
+        width: 805px;
+        border: 1px solid #E6E9ED;
+        margin: 0 auto;
+        margin-bottom: 10px;
+
+        .table-header {
+            &.padding_right {
+                padding-right: 17px;
+            }
+        }
+
+        .table-body {
+            min-height: 450px;
+            max-height: 600px;
+            overflow: auto;
+            padding-bottom: 10px;
+        }
+
+        table {
+            border: none;
+
+            tbody {
+                tr {
+                    td {
+                        border-left: none;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .modifyScore {
+        width: 100%;
+        height: auto;
+
+        .formBox {
+            width: 1000px;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid #E6E9ED;
+            position: relative;
+
+            .heard {
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                font-size: 16px;
+                border-bottom: 1px solid #E6E9ED;
+            }
+
+            form {
+                padding: 10px;
+
+                label {
+                    width: 100px;
+                }
+
+                .fileBox {
+
+                    .showTextName {
+                        width: 107px;
+                        height: 28px;
+                        padding-left: 10px;
+                        background: none;
+                        border: 1px solid #ccc;
+                        opacity: 1;
+                        color: #000;
+                    }
+
+                    .file {
+                        width: 68px;
+                        height: 24px;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .submit {
+                width: 100%;
+                height: auto;
+                padding-left: 118px;
+                padding-right: 144px;
+
+                span {
+
+
+                    &.active {
+                        color: #fff;
+                        background-color: #286090;
+                        border-color: #204d74;
+                    }
+
+                    &:nth-child(1) {
+                        width: 470px;
+                        float: left;
+                    }
+
+                    &:nth-child(2) {
+                        width: 134px;
+                        float: right;
+                    }
+                }
+            }
+
+            .download {
+                width: 160px;
+                height: 40px;
+                position: absolute;
+                right: 100px;
+                top: 50px;
+                border: 1px solid #E6E9ED;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 4px;
+            }
+        }
+
+        [data-name='jqGrid_upperRecord'] {
+            .ui-jqgrid {
+                margin-left: 116px;
+            }
+        }
+    }
+
+    #jqGrid_admin {
+        tbody {
+            tr {
+                td:last-child {
+                    overflow: inherit;
+                }
+            }
+        }
+    }
+
+    .support_modal {
+        h4 {
+            text-align: center;
+        }
+
+        .message_text {
+            padding-left: 32px;
+            line-height: 24px;
+            margin: 0;
+            color: red;
+        }
+
+        .modal-dialog {
+            position: absolute;
+            left: 50%;
+            margin-left: -300px;
+            top: 50%;
+            margin-top: -250px;
+        }
+    }
+}

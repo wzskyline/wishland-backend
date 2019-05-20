@@ -1,0 +1,78 @@
+<script id="live_live_monitor_template" type="text/template">
+    <div id="live_live_monitor">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>直播状态查询</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app exported_button"><i class="glyphicon glyphicon-refresh"></i>刷新</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="">
+
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group border border-warning">
+                                            <label class="col-md-1 control-label">品牌</label>
+                                            <div class="col-md-2">
+                                                <select class="form-control type-select" name="merchant">
+                                                    <option value="sgl818">香格里拉</option>
+                                                    <option value="0">2000cai</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            <!-- 房间tabs -->
+                            <ul class="room_tabs" data-name="roo_tabs">
+                                <li class="active" data-name="m_uat_jack">房间1</li>
+                            </ul>
+
+                            <!--  视讯区: Start -->
+                            <div class="live_body clearfix">
+
+                                <!-- 视讯区: Start -->
+                                <div class="left_live_content ">
+                                    <div class="live_user clearfix">
+                                        <div class="user_img">
+                                            <img src="../../images/live/user_img.png" data-name="user_img" alt="主播头像">
+                                            <div class="modelUser">主播：<span data-name="modelUser">瑶瑶</span></div>
+                                        </div>
+                                        <div class="user_message">
+                                           <div><span>当前在线人数</span><span data-name="onlineUsers">2000</span></div>
+                                           <div><span>独立在线IP</span><span data-name="singleIP">API暂时不支持</span></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="formContent" data-name="jqGrid" style="width: 100%;">
+                                        <table id="jqGrid"></table>
+                                        <div id="jqGridPager"></div>
+                                    </div>
+
+                                </div>
+                                 <!-- 视讯区: Eed -->
+
+                            </div>
+                            <!--  视讯区: Eed -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+    </div>
+</script>

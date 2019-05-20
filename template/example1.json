@@ -1,0 +1,25 @@
+{
+    "template": "example1",
+    "module": "sgl818",
+    "name": "announcement",
+    "title": "主播状态监控",
+    "func": {
+        "inquire": {},
+        "exported": {},
+        "add": {
+            "sub_title": "新增会员"
+        },
+        "modify": {
+            "sub_title": "修改会员"
+        },
+        "config": {
+            "sub_title": "設定",
+            "width": null,
+            "height": null
+        },
+        "support": {
+            "width": null,
+            "height": null
+        }
+    }
+}

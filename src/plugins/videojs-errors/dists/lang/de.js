@@ -1,0 +1,14 @@
+videojs.addLanguage('de', {
+  "No video has been loaded": "Es wurde kein Video geladen.",
+  "Could not download the video": "Das Video konnte nicht heruntergeladen werden.",
+  "The video connection was lost, please confirm you are connected to the internet": "Die Videoverbindung wurde abgebrochen, überprüfen Sie, ob eine Internetverbindung besteht.",
+  "The video is bad or in a format that cannot be played on your browser": "Dieses Video ist beschädigt, oder das Format ist mit Ihrem Browser nicht abspielbar.",
+  "This video is either unavailable or not supported in this browser": "Dieses Video ist entweder nicht verfügbar, oder es wird in diesem Browser nicht unterstützt.",
+  "Error Code": "Fehlercode",
+  "Technical details": "Technische Details",
+  "An unanticipated problem was encountered, check back soon and try again": "Ein unvorhergesehenes Problem ist aufgetreten, versuchen Sie es in Kürze noch einmal.",
+  "This video is restricted from playing on your current domain": "Dieses Video darf aufgrund von Einschränkungen für Ihre Domäne nicht abgespielt werden.",
+  "This video is restricted at your current IP address": "Ihre IP-Adresse ist nicht berechtigt, auf dieses Video zuzugreifen.",
+  "This video is restricted from playing in your current geographic region": "Dieses Video darf aufgrund von Einschränkungen für Ihre geografische Region nicht abgespielt werden.",
+  "If you are using an older browser please try upgrading or installing Flash.": "Wenn Sie einen veralteten Browser verwenden, versuchen Sie Flash zu aktualisieren oder zu installieren."
+});

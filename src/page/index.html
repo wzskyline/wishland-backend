@@ -1,0 +1,137 @@
+<!-- @@master = ../layout/layout-1.html -->
+
+<!-- @@block = css -->
+<!-- iCheck -->
+<link rel="stylesheet" href="./bower_components/iCheck/skins/flat/green.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="./bower_components/select2/dist/css/select2.min.css">
+<!-- bootstrap-wysiwyg -->
+<link rel="stylesheet" href="./bower_components/bootstrap-wysiwyg/css/style.css" />
+<!-- bootstrap-daterangepicker -->
+<link rel="stylesheet" href="./bower_components/bootstrap-daterangepicker/daterangepicker.css" />
+
+<!-- Guriddo_jqgrid -->
+<link rel="stylesheet" href="./plugins/Guriddo_jqgrid/css/trirand/ui.jqgrid-bootstrap.css" />
+<!-- multiselect2side -->
+<link rel="stylesheet" href="./plugins/jquery.multiselect2side/jquery.multiselect2side.css" />
+
+<link rel="stylesheet" href="./css/index.css?v={VERSION}" />
+<link rel="stylesheet" as="style" href="./bower_components/fancybox/dist/jquery.fancybox.min.css?v={VERSION}" />
+<!--  ztree-->
+<link rel="stylesheet" href="./bower_components/z-tree.v3/css/zTreeStyle/zTreeStyle.css" />
+<!-- 视频 -->
+<link rel="stylesheet" as="style" href="./plugins/videojs/dists/video-js.min.css?v={VERSION}" />
+<!-- @@close -->
+<!-- @@block = content -->
+
+<body class="nav-md">
+    <div id="global_loader" class="loading_wrap active">
+        <div class="loader-2"></div>
+    </div>
+    <div id="version" onclick="global.showSystemInfo();">v{VERSION}</div>
+</body>
+<!--template-->
+<!-- @@close -->
+<!-- @@block = js -->
+<script src="../js/global.js"></script>
+<script src="../bower_components/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="../bower_components/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="../bower_components/iCheck/icheck.min.js"></script>
+<!-- Select2 -->
+<script src="../bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- jQuery Tags Input -->
+<script src="../bower_components/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Parsley -->
+<script src="../bower_components/parsleyjs/dist/parsley.min.js"></script>
+<!-- Datatables -->
+<script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../bower_components/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../bower_components/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="../bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="../bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="../bower_components/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="../bower_components/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="../bower_components/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../bower_components/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="../bower_components/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="../bower_components/fancybox/dist/jquery.fancybox.min.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="../bower_components/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="../bower_components/jquery.hotkeys/jquery.hotkeys.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="../bower_components/moment/min/moment.min.js"></script>
+<script src="../bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-datetimepicker -->
+<!-- Ion.RangeSlider -->
+<script src="../bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+<!-- jquery.inputmask -->
+<script src="../bower_components/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+<!-- jQuery Knob -->
+<script src="../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- Cropper -->
+<script src="../bower_components/cropper/dist/cropper.min.js"></script>
+<!-- Guriddo_jqgrid -->
+<script src="../plugins/Guriddo_jqgrid/js/trirand/i18n/grid.locale-cn.js"></script>
+<script src="../plugins/Guriddo_jqgrid/js/trirand/jquery.jqGrid.min.js"></script>
+<!-- multiselect2side -->
+<script src="../plugins/jquery.multiselect2side/jquery.multiselect2side.js"></script>
+
+<script src="../plugins/Guriddo_jqgrid/js/jquery.uploadfile.min.js"></script>
+<script src="../plugins/widget/scripts/message.js"></script>
+<!-- z-tree -->
+<script src="../bower_components/z-tree.v3/js/jquery.ztree.all.min.js"></script>
+<script src="../js/_app.js?{VERSION}"></script>
+<script src="../js/_login.js?{VERSION}"></script>
+<!-- 主播 -->
+<script type="application/javascript" src="./live/NIM_Web_SDK_v5.2.0.js"></script>
+<script type="application/javascript" src="./live/nim_service.js"></script>
+<script type="application/javascript" src="./live/com_service.js"></script>
+<script type="application/javascript" src="./live/live_show_moderator.js"></script>
+<script type="application/javascript" src="./live/live_show_model.js"></script>
+<!-- socket.io 模块 -->
+<script src="../bower_components/socket.io-client/dist/socket.io.js"></script>
+<script src="../plugins/Guriddo_jqgrid/dialog.js"></script>
+<script>
+NProgress.done();
+$("#global_loader").remove();
+
+$(document).ready(function() {
+    if (String.isNotEmpty(localStorage.getItem("token"))) {
+
+        $.ajax({
+            url: "./wishland/config/global",
+            type: "get",
+            headers: {
+                "authorization-ww": user.getToken()
+            },
+            dataType: "json"
+        }).always(function(data) {
+            if (data.status == true) { // this status have 401
+                global = Object.assign(global, data.data);
+            }
+
+            $.ajax({
+                url: "./wishland/user/current_user",
+                type: "get",
+                headers: {
+                    "authorization-ww": user.getToken()
+                },
+                dataType: "json"
+            }).done(function() {
+                app.init();
+            }).fail(function(xhr, status, err) {
+                login.init();
+            });
+        });
+
+    } else {
+        login.init();
+    }
+});
+
+</script>
+<!-- @@close -->

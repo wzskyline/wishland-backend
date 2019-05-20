@@ -1,0 +1,163 @@
+<script id="system_permission_manage_template" type="text/template">
+    <div id="permission_manage">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>权限管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                         <a class="btn btn-app add_button"><i class="fa fa-plus"></i>新增</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_content">
+
+                                <div class="clearfix">
+                                    <!-- alert_message -->
+                                    <div class="col-md-2 col-sm-2 col-xs-2 alert_message">
+                                        <ul id="treeDemo" class="ztree" style='margin-left:170px;margin-top:100px'></ul>
+                                    </div>
+                                    <div class="col-md-10 col-sm-10 col-xs-10 alert_message">
+                                        <table id="jqGrid"></table>
+                                        <div id="jqGridPager"></div>
+                                    </div>
+                                    <!-- alert_message -->
+                                </div>
+                                <div class="blank"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>权限管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>新增权限</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">权限名称<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control  permission-name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">权限描述<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control  permission-title">
+                                        </div>
+                                    </div>
+                                     
+                                    <span class="ret"><span>
+                                </form>
+                                <div class="blank"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 新增:end -->
+         <!-- 更新:start -->
+        <div page="update">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>权限管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>更新权限</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">权限ID<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" readonly="readonly" class="form-control  update-id">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">权限名称<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"    maxlength="50" class="form-control  update-name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">权限描述<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"  maxlength="50"  class="form-control  update-title">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">权限组<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select class="form-control group-select">
+                                                 
+                                                 
+                                            </select>
+                                        </div>
+                                    </div>
+                                     
+                                    <span class="update-ret"><span>
+                                </form>
+                                <div class="blank"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 更新:end -->
+        
+    </div>
+</script>

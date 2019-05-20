@@ -1,0 +1,368 @@
+<script id="game_playing_masters_template" type="text/template">
+    <div id="masters">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>带打师列表</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app add_button"><i class="fa fa-plus"></i>新增</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_content">
+                                <div class="clearfix">
+                                        <div class="well">
+                                                <form class="form-horizontal form-label-left">
+                                                    <div class="form-group">
+                                                        <label class="col-md-1 control-label">编号</label>
+                                                        <div class="col-md-2"><input type="text" class="form-control search-master-id"/></div>
+                                                        <label class="col-md-1 control-label">名称</label>
+                                                        <div class="col-md-2"><input type="text" class="form-control search-master-name"/></div>
+                                                        <label class="col-md-1 control-label">状态</label>
+                                                        <div class="col-md-2">
+                                                            <select class="form-control search-master-state">
+                                                                <option value="1">开启</option>
+                                                                <option value="0">关闭</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            
+                                                    <table id="jqGrid"></table>
+                                                    <div id="jqGridPager"></div> 
+                                             
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+      
+ <!-- 新增:start -->
+ <div page="add">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>带打师</h3>
+        </div>
+        <div class="title_right">
+            <div class="pull-right">
+                <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="page-content">
+        <div class="clearfix">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>新增带打师</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <form class="form-horizontal form-label-left">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">名称<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" class="form-control  add-master-name"  maxlength="50">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">品牌 </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select class="form-control  add-master-brand">
+                             
+                                            </select>   
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">密码<span class="required">*</span></label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="password" class="form-control  add-master-pwd" maxlength="10">
+                                    </div>
+                                </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">头像<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="file" class="form-control " id="add-master-ico" name="file">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">介绍<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <textarea type="text" class="form-control  add-master-desc"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">带打时间<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input class="form-control  add-master-timestr   timestr"  maxlength="20">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                    <div class="form-group">
+                                            <span class="add-master-ret"><span>
+                                    </div>
+                                </div>
+                               
+                           
+                                 
+                            
+                                    
+                        </form>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 新增:end -->
+
+<!-- 更新:start -->
+<div page="update">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>带打师</h3>
+        </div>
+        <div class="title_right">
+            <div class="pull-right">
+                <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="page-content">
+        <div class="clearfix">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>更新带打师</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <form class="form-horizontal form-label-left">
+                                <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">ID</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control update-master-id" readonly>
+                                        </div>
+                                    </div>
+                                
+                                <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">名称 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control  update-master-name" maxlength="20">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">品牌 </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                    <select class="form-control  update-master-brand">
+                                     
+                                                    </select>   
+                                            </div>
+                                        </div>
+                                    <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">密码 </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="password" class="form-control  update-master-pwd" maxlength="10">
+                                            </div>
+                                        </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">头像 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="file" class="form-control " id="update-master-ico" name="file">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">介绍</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea type="text" class="form-control  update-master-desc"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">带打时间 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input class="form-control  update-master-timestr  timestr"  maxlength="20">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12">房间验证码 </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input class="form-control  update-master-code"  maxlength="50">
+                                            </div>
+                                        </div>
+                                         
+                                    
+                                            <div class="form-group">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                            <span class="update-master-ret"><span>
+                                                    </div>
+                                                </div>
+                                               
+                                            
+                                           
+                                            
+                        </form>
+                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 更新:end -->
+
+<!-- 带打师房间:start -->
+<div page="room">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>带打师</h3>
+        </div>
+        <div class="title_right">
+            <div class="pull-right">
+                <a class="btn btn-app close_room_button"><i class="fa fa-cog"></i>关闭</a>
+                <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="page-content">
+        <div class="clearfix">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title"> 
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                          <!-- alert_message -->
+                          <div class="col-md-12 col-sm-12 col-xs-12 alert_message">
+                          <!-- 带打师房间面板 -->
+
+                          <div class="room-left col-md-6 col-sm-6 col-xs-6">
+                            <div>
+                              <div class='master-img'>
+                                 <img  class="master-room-master-img" src="http://iph.href.lu/50x70?text=头像&fg=000000&bg=CCCCCC">
+                             </div>
+                             <div class='master-name'> 
+                              
+                              </div>
+                              </div>
+                            
+                             <div class="mid-span">
+                                 <span >房间置顶内容:</span> 
+                              </div>
+                            <div class='master-title'>
+                              
+                                <textarea class="roomtitle"></textarea>
+                            </div> 
+                            <span>房间带打详情:</span>
+                            <div class='master-title'>
+                                <div class="room-out">
+                                        
+                                </div>
+                            </div> 
+                            <div class='master-send' id="main-txt">
+                                <input value="" class='room-txt'/>
+                                <span class='room-img-msg'>上传图片 </span> 
+                                <form id="ajax-upload" style="display: none;" enctype="multipart/form-data">
+                                <input type="file" value="图片容器" class="room-imgs" id="roomImg"  name ="file" style="display: none;"> 
+                                </form>
+                                 <button class="master-txt-submit">发送</button>
+                           </div> 
+                           <div class='master-choose'>
+                             <div class="choose-left">
+                                    游戏 <select class="setno">  </select> 牌桌 <input class="deskno" value="s1023"><br><br>
+                                     <div>
+                                            选择结果  
+                                            <input type="button" value="庄"   data-predict = "1"  class="choose-btn  predict"/>
+                                            <input type="button"  value="闲"  data-predict = "2"  class="choose-btn"/>
+                                            <input type="button"   value="和"  data-predict = "3"  class="choose-btn"/>
+                                     </div>   
+                                     <br>
+                                     输入金额 <input class="choose-input" value="1"> 
+                                     
+                             </div>
+                             <div class="choose-right">
+                                 <button class="master-choose-submit">发送</button>
+                             </div>
+                         </div> 
+                         
+                        </div>
+                       
+                         
+                      <!-- 房间 用户列表面板 -->
+                            <div class="col-md-4 col-sm-4 col-xs-4 users-div" style="padding:0px">
+                                    <div  class="users-head">
+                                            <span class = "user-summary">用户列表(2人)</span>
+                                            <div>
+                                                    <span class = "show-control">显示全部</span>
+                                                    <label class="switch">
+                                                            <input  class="myinput" type="checkbox">
+                                                            <div class="slider round"></div>
+                                                    </label>
+                                            </div>
+                                    </div>   
+                                
+                                        <div class="right-user row">
+                                            <span class="right-user-no">
+                                                      3800056
+                                                 </span>
+                                                <div class ="right-img-div">
+                                                        <img src="http://iph.href.lu/50x70?text=头像&fg=000000&bg=CCCCCC" style="width: 80px;height: 80px;border-radius: 40px;"/> 
+                                               </div>
+                                                <span class="right-user-name">
+                                                      大军
+                                                 </span>
+                                                 
+                                                 <span class="right-user-type">
+                                                     真人
+                                                 </span>
+                                          </div> 
+                            </div>
+                            <div class="user-foot">    
+                                    <span class="user-foot-pre">前一页</span>  <br>
+                                    <span class="user-foot-page">1/10</span>    <br>
+                                    <span class="user-foot-next">后一页</span>  <br>
+                            </div>
+                        </div>
+                            
+                        
+                        <div class="blank"></div>
+                    </div>
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 带打师房间:end -->
+
+<!-- 設定modal:start -->
+<div class="config_modal modal fade" role="dialog">
+    <div class="modal-dialog img-detail">
+        
+    </div>
+</div>
+<!-- 設定modal:end -->
+ 
+
+<div>
+</script>

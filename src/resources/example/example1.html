@@ -1,0 +1,265 @@
+<script id="example_example1_template" type="text/template">
+    <div id="example1">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>会员管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app exported_button"><i class="fa fa-download"></i>汇出</a>
+                        <a class="btn btn-app add_button"><i class="fa fa-plus"></i>新增</a>
+                        <a class="btn btn-app config_button"><i class="fa fa-cog"></i>设定</a>
+                        <a class="btn btn-app support_button"><i class="fa fa-support"></i>说明</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_content">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">帐号</label>
+                                            <div class="col-md-2"><input type="text" class="form-control"/></div>
+                                            <label class="col-md-1 control-label">性别</label>
+                                            <div class="col-md-2">
+                                                <select class="form-control">
+                                                    <option value="1">Boy</option>
+                                                    <option value="0">Girl</option>
+                                                </select>
+                                            </div>
+                                            <label class="col-md-1 control-label">注册时间</label>
+                                            <div class="col-md-3"><input type="text" name="dates" class="form-control"></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="clearfix">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                                <hr>
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>会员管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>新增會員</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Text<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Password<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="password" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Date<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control" name="dates">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Select</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select class="form-control">
+                                                <option value="1">选项一</option>
+                                                <option value="1">选项二</option>
+                                                <option value="1">选项三</option>
+                                                <option value="1">选项四</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Multiple Select</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select class="form-control select2_multiple" multiple="multiple">
+                                                <option value="1">选项一</option>
+                                                <option value="1">选项二</option>
+                                                <option value="1">选项三</option>
+                                                <option value="1">选项四</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Button Group</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="btn-group" data-toggle="buttons">
+                                                <a class="btn btn-default active" data-toggle-class="btn-default" data-toggle-passive-class="btn-primary">选项一</a>
+                                                <a class="btn btn-primary" data-toggle-class="btn-default" data-toggle-passive-class="btn-primary">选项二</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Input Tag</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input name="tags" value="选项一,选项二,选项三">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Textarea</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea name="" class="form-control" rows="5" placeholder="Textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Checkbox</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="checkbox">
+                                                <label><input type="checkbox" name="checkbox[]" class="flat" checked="checked"> 选项一</label>
+                                                <label><input type="checkbox" name="checkbox[]" class="flat"> 选项二</label>
+                                                <label><input type="checkbox" name="checkbox[]" class="flat"> 选项三</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Radio</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <div class="checkbox">
+                                                <label><input type="radio" name="radio[]" class="flat" checked="checked"> 选项一</label>
+                                                <label><input type="radio" name="radio[]" class="flat"> 选项二</label>
+                                                <label><input type="radio" name="radio[]" class="flat"> 选项三</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 新增:end -->
+        <!-- 修改:start -->
+        <div page="modify">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>会员管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>修改會員</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Text<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Password<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="password" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 修改:end -->
+
+        <!-- 設定modal:start -->
+        <div class="config_modal modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">設定</h4>
+                    </div>
+                    <div class="modal-body" style="height: 300px;">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 設定modal:end -->
+        <!-- 說明modal:start -->
+        <div class="support_modal modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">说明</h4>
+                    </div>
+                    <div class="modal-body" style="height: 500px; overflow: scroll;">
+                        <p>Some text in the modal.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 說明modal:end -->
+    </div>
+</script>

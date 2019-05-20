@@ -1,0 +1,93 @@
+<script id="sgl818_suggestions_template" type="text/template">
+    <div id="sgl818_suggestions">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>意见反馈</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app exported_button" style="display: none"><i class="fa fa-download"></i>汇出</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">日期</label>
+                                            <div class="col-md-3">
+                                                <input type="text" name="dates"  placeholder="日期查询" class="form-control pull-right">
+                                            </div>
+                                            <label class="col-md-1 control-label">帐号</label>
+                                            <div class="col-md-2"><input type="text" placeholder="帐号查询" class="form-control" name="userName"/></div>
+                                            <label class="col-md-1 control-label">类型</label>
+                                            <div class="col-md-2">
+                                                <select class="form-control type-select" name="inquireType">
+                                                    <option value="0">0</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                             
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        
+        <!-- 設定modal:start -->
+        <div class="config_modal modal fade" role="dialog">
+            <div class="modal-dialog" style="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">設定</h4>
+                    </div>
+                    <div class="modal-body" style=""></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 設定modal:end -->
+        
+        <!-- 說明modal:start -->
+        <div class="support_modal modal fade" role="dialog">
+            <div class="modal-dialog" style="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">说明</h4>
+                    </div>
+                    <div class="modal-body" style=" overflow: scroll;"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 說明modal:end -->
+    </div>
+</script>

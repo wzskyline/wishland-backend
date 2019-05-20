@@ -1,0 +1,109 @@
+
+
+#app{
+	width: auto; height: 100%;
+	overflow: hidden;
+	&>.body{
+		opacity: 0;
+		@include transition(all 400ms);
+		
+		&.active{opacity: 1;}
+	}
+	
+	&>.body{
+		width: auto; height: 100%;
+		@include transition-delay(100ms);
+	}
+	
+	.main_container{
+		width: 100%;
+	    height: 100%;
+		
+		.right_col,
+		.left_col{
+			height: 100%;
+		}
+		
+		.right_col{
+			padding: 10px 20px 0px 20px;
+			float: left;
+			width: calc(100% - 230px);
+			margin-left: 0;
+			position: relative;
+		}
+
+
+		.top_nav{
+			float: left;
+			width: calc(100% - 230px);
+			margin-left: 0;
+		}
+		
+		main{
+			
+			#wrap{
+				width: 100%; height: 100%;
+				overflow: hidden;
+				
+				&>div{
+					width: 100%; height: 100%;
+					opacity: 0;
+					overflow: hidden;
+					@include transition(all 400ms);
+					
+					&.active{
+						opacity: 1;
+					}
+				}
+				
+				[page]{
+					display: none;
+					width: 100%; height: 100%;
+					
+					&.active{
+						display: block;
+					}
+					
+				}
+			}
+			#error {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0; left: 0;
+			}
+		
+			#error {
+				display: none;
+				padding-top: 58px;
+		
+				&.active {
+					display: block;
+				}
+		
+				.content {
+					width: 100%;
+					height: 300px;
+				}
+		
+				.message {
+					font-size: 20px;
+					text-align: center;
+					color: red;
+				}
+			}
+		}
+	}
+	
+	#sidebar-menu{
+		height: calc(100% - #{80px + 57px + 23px});
+		overflow-y: auto;
+	}
+
+	.waitingForDev{
+		font-size: 24px;
+		text-align: center;
+		height:500px;
+		padding-top: 230px;
+	}
+}

@@ -1,0 +1,204 @@
+<script id="game_playing_wechater_template" type="text/template">
+    <div id="wechater">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>客服</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                            <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app add_button"><i class="fa fa-plus"></i>新增</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_content">
+                                
+                                <div class="clearfix">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message">
+
+                                            <div class="well">
+                                                    <form class="form-horizontal form-label-left">
+                                                        <div class="form-group">
+                                                            <label class="col-md-1 control-label">编号</label>
+                                                            <div class="col-md-2"><input type="text" class="form-control search-wechater-id"/></div>
+                                                            <label class="col-md-1 control-label">名称</label>
+                                                            <div class="col-md-2"><input type="text" class="form-control search-wechater-name"/></div>
+                                                            <label class="col-md-1 control-label">微信号</label>
+                                                            <div class="col-md-2"><input type="text" class="form-control search-wechater-wechat"/></div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                        
+
+
+
+
+                                    </div>
+                                    <!-- alert_message -->
+                                </div> 
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+      
+ <!-- 新增:start -->
+ <div page="add">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>客服</h3>
+        </div>
+        <div class="title_right">
+            <div class="pull-right">
+                <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="page-content">
+        <div class="clearfix">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>新增客服</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <form class="form-horizontal form-label-left">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">名称<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" class="form-control  wechater-name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">头像<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="file" id="img-ico" name="file" class="form-control  add-wechater-ico">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">三围<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" class="form-control  wechater-desc">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">微信号<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" class="form-control  wechater-no">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">二维码 <span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="file" id="img-qrcode"  name="file" class="form-control add-wechater-qrcode">
+                                </div>
+                            </div>
+                             
+                           
+                            <span class="wechat-ret"><span>
+                        </form>
+                        <div class="blank"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 新增:end -->
+
+<!-- 更新:start -->
+<div page="update">
+    <div class="page-title">
+        <div class="title_left">
+            <h3>客服</h3>
+        </div>
+        <div class="title_right">
+            <div class="pull-right">
+                <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="page-content">
+        <div class="clearfix">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>更新客服</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <form class="form-horizontal form-label-left">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">ID<span class="required">*</span></label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" readonly="readonly" class="form-control  update-wechater-id">
+                                </div>
+                            </div>
+                             
+                            <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">名称 </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" class="form-control  update-wechater-name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">头像 </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="file" id="update-wechater-ico" name="file" class="form-control  update-wechater-ico">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">三围 </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" class="form-control  update-wechater-desc">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">微信号 </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" class="form-control  update-wechater-no">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">二维码  </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="file" id="update-wechater-qrcode"  name="file" class="form-control  update-wechater-qrcode">
+                                    </div>
+                                </div>
+                                 
+                               
+                                <span class="update-wechater-ret"><span>
+                        </form>
+                        <div class="blank"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 更新:end -->
+
+
+
+
+
+
+<div>
+</script>

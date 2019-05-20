@@ -1,0 +1,272 @@
+@import "compass/css3";
+
+#live_live_control {
+    .x_panel {
+        padding-bottom: 100px;
+        min-width: 1408px
+    }
+
+    .nav_tabs {
+        width: 100%;
+        height: 60px;
+
+        li {
+            display: block;
+            width: auto;
+            height: 30px;
+            padding: 0 10px;
+            float: left;
+            font-size: 14px;
+            cursor: pointer;
+
+            &.active,
+            &:hover {
+                font-weight: bold;
+                color: #0ba3f7;
+            }
+        }
+    }
+
+    .room_tabs {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #E6E9ED;
+        padding: 10px 0;
+
+        li {
+            width: auto;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            padding: 0 10px;
+            @include border-radius(4px);
+            background-color: rgb(183, 180, 180);
+            color: #fff;
+            margin-right: 14px;
+            cursor: pointer;
+            position: relative;
+            left: 0;
+            top: 0;
+
+            &.active {
+                background-color: rgb(0, 150, 136);
+            }
+
+            i {
+                position: absolute;
+                right: -21%;
+                top: -36%;
+                color: #FFFFFF;
+                background-color: red;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                font-style: normal;
+                font-size: 12px;
+
+                &.hide {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .live_body {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+
+        .left_live_content {
+            width: 300px;
+            height: auto;
+            float: left;
+
+            .live_user {
+                width: 100%;
+                height: auto;
+
+                .user_img {
+                    width: 100px;
+                    height: 100px;
+                    float: left;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .user_message {
+                    width: 186px;
+                    height: 100%;
+                    float: left;
+                    margin-left: 12px;
+
+                    span {
+                        display: block;
+                        line-height: 26px;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+
+            .live_content {
+                width: 300px;
+                height: 300px;
+                background-color: #ddd;
+                overflow: hidden;
+                @include border-radius(3px);
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .audience_message {
+        width: 880px;
+        height: 540px;
+        float: left;
+        margin-left: 30px;
+        border: 1px solid #ddd;
+        @include border-radius(3px);
+        overflow: hidden;
+
+        .header {
+            width: 100%;
+            height: 40px;
+            background-color: #ff9800;
+
+            h3 {
+                width: 100px;
+                line-height: 40px;
+                color: #fff;
+                padding-left: 10px;
+                font-size: 14px;
+                float: left;
+            }
+
+            .menu {
+                width: 380px;
+                height: 100%;
+                float: right;
+
+                .select {
+                    width: auto;
+                    height: 100%;
+                    line-height: 40px;
+                    display: inline-block;
+                    vertical-align: bottom;
+
+                    label {
+                        width: 52px;
+                        height: 100%;
+                        padding: 0;
+                        text-align: center;
+                        font-size: 14px;
+                        color: #FFFFFF;
+                    }
+
+                    input {
+                        width: 158px;
+                        margin-top: 3px;
+                        border-radius: 4px;
+                    }
+
+                    select {
+                        width: 88px;
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+
+        .message_content {
+            width: 100%;
+            height: 500px;
+            overflow: auto;
+
+            ul {
+
+                li {
+                    width: 100%;
+                    min-height: 30px;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    position: relative;
+                    margin-top: 6px;
+                    border-bottom: 1px solid #ddd;
+                    background: rgb(239, 239, 239);
+
+                    // &.passed,
+                    // &.didNotPass,
+                    // &.waitingForProcessing{
+                    //     color: #fff;
+                    //     strong{color: #fff;}
+                    //     span{color: #000;}
+                    // }
+                    // &.passed{background-color: #12e508;}
+                    // &.didNotPass{background-color: #696969;}
+                    // &.waitingForProcessing{background-color: #160fa6;}
+
+                    time, strong, span {
+                        font-size: 13px;
+                    }
+
+                    p {
+                        display: inline-block;
+                        vertical-align: top;
+                        max-width: 650px;
+                        margin: 0;
+                        color: #000;
+                    }
+
+                    span {
+                        cursor: pointer;
+                        color: rgb(0, 150, 136);
+
+                        &.active {
+                            color: rgb(229, 28, 35);
+                        }
+                    }
+
+                    .status {
+                        color: rgb(168, 166, 166);
+                        margin-left: 17px;
+                    }
+
+                    .delete {
+                        background-color: rgb(168, 166, 166);
+                        border-color: transparent;
+                    }
+
+                    .btn-danger {
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                    }
+
+                    strong {
+                        font-weight: bold;
+                        margin-left: 12px;
+                        margin-right: 4px;
+                        color: #000;
+                    }
+
+                    button {
+                        margin: 0;
+                        font-size: 13px;
+                        height: 20px;
+                        line-height: 2px;
+                        vertical-align: baseline;
+                    }
+                }
+            }
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+}

@@ -1,0 +1,401 @@
+<script id="live_member_statistics_template" type="text/template">
+    <div id="live_member_statistics" style="overflow: hidden;">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>直播会员统计</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button" data-name="admin"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app exported_button"><i class="glyphicon glyphicon-refresh"></i>刷新</a>
+                        <a class="btn btn-app push_button" data-permissions="batchAddScore"><i class="glyphicon glyphicon-open"></i>批量上分</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel" style="min-width:1594px;">
+                            <div class="" data-name="tableBox">
+                                <div class="well" data-name="menu">
+
+                                    <!-- 直播会员管理 筛选条件 -->
+                                    <form class="form-horizontal form-label-left menu" name="admin" style="display: none">
+
+                                        <label class="col-md-1 control-label" style="width:52px;">品牌</label>
+                                        <div class="col-md-2" >
+                                            <select class="form-control type-select" name="admin_merchant">
+                                                <option value="sgl818">香格里拉</option>
+                                                <option value="0">2000cai</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">玩家账号</label>
+                                        <div class="col-md-2" style="width: 164px"><input type="text" placeholder="帐号查询" class="form-control" name="userName" data-name="admin_input"></div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">玩家昵称</label>
+                                        <div class="col-md-2" style="width: 164px"><input type="text" placeholder="昵称查询" class="form-control" name="nickName" data-name="admin_input"></div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">等级类型</label>
+                                        <div class="col-md-2" style="width:100px;">
+                                            <select class="form-control type-select" name="classification">
+                                                <option value="">全部</option>
+                                                <option value="0">贵宾</option>
+                                                <option value="1">贡献</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">玩家等级</label>
+                                        <div class="col-md-2" style="width:100px;">
+                                            <select class="form-control type-select" name="classificationId">
+                                                <option value="">全部</option>
+                                                <option value="1">等级1</option>
+                                                <option value="2">等级2</option>
+                                                <option value="3">等级3</option>
+                                                <option value="4">等级4</option>
+                                                <option value="5">等级5</option>
+                                                <option value="6">等级6</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">玩家类型</label>
+                                        <div class="col-md-2" style="width:100px;">
+                                            <select class="form-control type-select" name="playerType">
+                                                <option value="all">全部</option>
+                                                <option value="P">真人</option>
+                                                <option value="A">托</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label" style="width: 60px;">状态</label>
+                                        <div class="col-md-2" style="width:100px;">
+                                            <select class="form-control type-select" name="messageForbidden">
+                                                <option value="">全部</option>
+                                                <option value="N">正常</option>
+                                                <option value="Y">被禁言</option>
+                                                <!-- <option value="3">被拉黑</option> -->
+                                            </select>
+                                        </div>
+                                    </form>
+
+                                    <!-- 直播会员统计 筛选条件 -->
+                                    <form class="form-horizontal form-label-left menu" name="statistics" style="display: none">
+
+                                        <label class="col-md-1 control-label" >品牌</label>
+                                        <div class="col-md-2" >
+                                            <select class="form-control type-select" name="inquireType">
+                                                <option value="0">香格里拉</option>
+                                                <option value="0">2000cai</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">玩家类型</label>
+                                        <div class="col-md-2" style="width:100px;">
+                                            <select class="form-control type-select" name="inquireType">
+                                                <option value="0">真人</option>
+                                                <option value="1">托</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">会员等级</label>
+                                        <div class="col-md-2" style="width:100px;">
+                                            <select class="form-control type-select" name="inquireType">
+                                                <option value="0">全部</option>
+                                                <option value="1">等级1</option>
+                                            </select>
+                                        </div>
+                                    </form>
+
+                                    <!-- 批量上分记录 筛选条件 -->
+                                    <form class="form-horizontal form-label-left menu" name="upperRecordRecording">
+
+                                        <label class="col-md-1 control-label" >品牌</label>
+                                        <div class="col-md-2" >
+                                            <select class="form-control type-select" name="merchant">
+                                                <option value="sgl818">香格里拉</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label" style="width: 78px;">操作类型</label>
+                                        <div class="col-md-2" style="width:100px;">
+                                            <select class="form-control type-select" name="inquireType">
+                                                <option value="LIVE_POINTS_UPDATE">上分</option>
+                                            </select>
+                                        </div>
+                                    </form> 
+                                </div>
+                                <!-- tab -->
+                                <ul class="nav navbar-nav" data-name="live_type">
+                                    <li data-type="admin" class="active"><a href="javascript:;">直播会员管理</a></li>
+                                    <li data-type="statistics" data-permissions="statistics"><a href="javascript:;">直播会员统计</a></li>
+                                    <li data-type="upperRecordRecording"  data-permissions="batchScoreList"><a href="javascript:;">批量上分记录</a></li>
+                                </ul>
+
+                                <div class="row">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                                <hr>
+
+                                <div class="formContent" data-name="jqGrid_admin">
+                                    <table id="jqGrid_admin"></table>
+                                    <div id="jqGridPager_admin"></div>
+                                </div>
+
+                                <div class="formContent" data-name="jqGrid_statistics">
+                                    <div class="waitingForDev">待开发</div>
+                                    <!--<table id="jqGrid_statistics"></table>-->
+                                    <!--<div id="jqGridPager_statistics"></div>-->
+                                </div>
+
+                                <div class="formContent" data-name="jqGrid_upperRecordRecording">
+                                    <table id="jqGrid_upperRecordRecording"></table>
+                                    <div id="jqGridPager_upperRecordRecording"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+
+        <!-- 批量上分:start -->
+        <div page="modifyScore">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>批量上下分</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button" data-name="modifyScore"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="overflow-y: auto;">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>查看批量上分详情</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="modifyScore" data-name="modifyScore" >
+                                    <div class="formBox">
+                                        <div class="heard">批量上下分</div>
+                                        <form class="form-horizontal form-llive_live_roomabel-left"  id="form">
+
+                                            <a href="../../resources/upperScoreFormat.csv" download="upperScoreFormat.csv" class="download">下载文件格式范例</a>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" >选择品牌：</label>
+                                                <div class="col-md-6" style="width: 126px;">
+                                                    <select class="form-control type-select" data-name="merchant">
+                                                        <option value="sgl818">香格里拉</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label" >操作类型：</label>
+                                                <div class="col-md-6" style="width: 126px;">
+                                                    <select class="form-control type-select"  data-name="livePointsType">
+                                                        <option value="LIVE_POINTS_UPDATE">上分</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">上传名单：</label>
+                                                <div class="col-md-6 fileBox">
+                                                    <input type="text" disabled="disabled" value="" class="showTextName">
+                                                    <!-- 提交参数 -->
+                                                    <input type="hidden" name="merchant" value="sgl818">
+                                                    <input type="hidden" name="type" value="LIVE_POINTS_UPDdescriptionATE">
+                                                    <input type="hidden" name="description" value="live point updates 1">
+                                                    <input type="file" name="file-to-upload" id="file" class="file">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">备注：</label>
+                                                <div class="col-md-6">
+                                                    <textarea empty="true" style="width: 492px;height: 92px;" data-name="textarea"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group submit" style="padding-left: 108px">
+                                                <span class="btn btn-primary " data-name="upload" style="width: 124px;">开始上传</span>
+                                            </div>
+                                        </form>
+
+                                        <div class="" data-name="jqGrid_upperRecord">
+                                            <table id="jqGrid_upperRecord"></table>
+                                            <div id="jqGridPager_upperRecord"></div>
+                                        </div>
+
+                                        <div class="form-group submit clearfix" style="margin-top: 10px;">
+                                            <span style=" color: rgb(229, 28, 35);">如果处理时，中途失败，需要重新提交文件。提交时，请注意从失败的数据处开始提交，不要重复提交已处理的数据。</span>
+                                            <span class="btn btn-primary disabled" data-name="submit" >开始处理</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 批量上分:end -->
+
+        <!-- 查看会员:start -->
+        <div page="view">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>主播会员统计</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button" data-name="view"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>查看会员</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="table-box" >
+                                    <div class="table-header" data-name="table_header">
+                                        <table tabindex="0" role="presentation" aria-multiselectable="false" aria-labelledby="gbox_jqGrid" class="ui-jqgrid-btable ui-common-table table table-bordered" style="width: 100%; margin: 0 auto">
+                                            <tbody>
+                                            <tr class="jqgfirstrow" role="row">
+                                                <td role="gridcell" class="bordered th.ui-th-ltr" style="width: 10%">编号</td>
+                                                <td role="gridcell" style="width: 16%">玩家账号</td>
+                                                <td role="gridcell" style="width: 16.1%">玩家昵称</td>
+                                                <td role="gridcell" style="width: 16.1%">会员类型</td>
+                                                <td role="gridcell" style="width: 10.1%">点数</td>
+                                                <td role="gridcell" style="width: 10%">会员等级</td>
+                                                <td role="gridcell" style="width: 20.1%">统计时间</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-body" >
+                                        <table tabindex="0" role="presentation" aria-multiselectable="false" aria-labelledby="gbox_jqGrid" class="ui-jqgrid-btable ui-common-table table table-bordered" style="width: 100%; margin: 0 auto;">
+                                            <tbody data-name="member_statistics"> </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 查看会员:end -->
+
+        <!-- 批量上分记录详情:start -->
+        <div page="upperRecord">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>批量上分详情</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button" data-name="upperRecord"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>查看批量上分详情</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="" data-name="jqGrid_upperRecordDetails">
+                                    <table id="jqGrid_upperRecordDetails"></table>
+                                    <div id="jqGridPager_upperRecordDetails"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 批量上分记录详情:end -->
+
+        <!-- 单一上分：start -->
+        <div class="modal-backdrop fade in" style="display: none;"></div>
+        <div class="support_modal modal fade in" role="dialog" data-name="singleModifyScore" style="display: none;">
+            <div class="modal-dialog" style="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">上下分</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal form-llive_live_roomabel-left"  enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" >帐号：</label>
+                                <span class="col-md-6" style="width: 126px;height: 34px; line-height: 34px;" data-name="userId" data-user_id=""></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" >操作类型：</label>
+                                <div class="col-md-6" style="width: 126px;">
+                                    <select class="form-control type-select"  data-name="livePointsType">
+                                        <option value="LIVE_POINTS_UPDATE">上分</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" >上分金额：</label>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="请输入上分金额" class="form-control" data-name="amount_creditPoints">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" >强制修改金额：</label>
+                                <div class="col-md-4">
+                                    <input type="text" placeholder="请输入强制修改金额" class="form-control" data-name="amount_forcedBalance">
+                                </div>
+                            </div>
+                            <p class="message_text">【上分金额】与【强制修改金额】只能二选一填写</p>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-name="submitSingleModifyScore">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 单一上分：end -->
+
+    </div>
+</script>

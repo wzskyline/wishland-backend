@@ -1,0 +1,191 @@
+@import "compass/css3";
+
+#live_live_status_monitor{
+
+    .live_body{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+
+        .left_live_content{
+            width: 400px;
+            height: auto;
+            float: left;
+
+            .live_user{
+                width: 100%;
+                height: auto;
+
+                .user_img{
+                    min-width: 100px;
+                    min-height: 100px;
+                    max-width: 154px;
+                    max-height: 106px;
+                    float: left;
+    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .user_message{
+                    width: 230px;
+                    height: 106px;
+                    float: left;
+                    margin-left: 12px;
+                    margin-top: 10px;
+    
+                    span{
+                        display: block;
+                        line-height: 26px;
+                        font-size: 14px;
+                    }
+                }
+
+            }
+            .audience_live_content{
+                width: 400px;
+                height: 300px;
+                background-color: #ddd;
+                @include border-radius(3px);
+                margin-top: 10px;
+            }
+        }
+    }
+    .audience_message{
+        float: left;
+        width: 872px;
+        height: 444px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        overflow: hidden;
+
+        .title{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            padding-left: 10px;
+            background-color: rgb(255, 152, 0);
+        }
+        h3{ font-size: 14px; }
+        .message_content{
+            width: 100%;
+            height: 404px;
+            overflow: auto;
+
+            ul{
+                padding-bottom: 10px;
+                li{
+                    width: 100%;
+                    height: 30px;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    position: relative;
+                    margin-top: 6px;
+
+                    // 入场
+                    &.goInit{
+                        @include background( linear-gradient(-270deg, rgba(243, 230, 185, 0.8) 0%, rgba(249, 250, 244, 0.9) 70%) );
+                        .init_img{
+                            display: block;
+                        }
+                    }
+
+                    // 升级
+                    &.update{
+                        @include background( linear-gradient(-270deg, rgba(251, 175, 10, 0.8) 0%, rgba(250, 100, 199, 0.9) 90%) );
+                        color: #fff;
+                    }
+
+                    // 送歌
+                    &.song{
+                        @include background( linear-gradient(-270deg, rgba(80, 224, 191, 0.8) 0%, rgba(111, 136, 227, 0.9) 90%) );
+                        color: #fff;
+                    }
+                    &.announcement{
+                        @include background(  linear-gradient(-270deg, rgba(251, 175, 10, 0.8) 0%, rgba(250, 100, 199, 0.9) 90%) );
+                        color: #fff;
+                    }
+                    time,strong,span{
+                        font-size: 13px;
+                    }
+                    time{
+                        margin-right: 4px;
+                    }
+                    strong{
+                        font-weight: bold;
+                        color: #1fa6fd;
+                        &.active{ margin:0 4px; }
+                    }
+                    i{
+                        display: inline-block;
+                        vertical-align: sub;
+                        margin: 0 2px;
+                    }
+
+                    .init_img{
+                        width: 32px;
+                        height: 32px;
+                        display: none;
+                        position: absolute;
+                        right: 20px;
+                        top: 0;
+
+                        img{
+                            width: 53px;
+                            height: 53px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin-left: -26.5px;
+                            margin-top: -26.5px;
+                        }
+                    }
+
+                    .gift{
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        position: relative;
+                        vertical-align: top;
+
+                        img{
+                            width: 24px;
+                            height: 27px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin-left: -12px;
+                            margin-top: -13.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .room_tabs{
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #E6E9ED;
+        padding: 10px 0;
+
+        li{
+            width: auto;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            padding: 0 10px;
+            @include border-radius(4px);
+            background-color: rgb(183, 180, 180);
+            color: #fff;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &.active{
+                background-color: rgb(0, 150, 136);
+            }
+        }
+    }
+}

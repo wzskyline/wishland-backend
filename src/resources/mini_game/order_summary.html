@@ -1,0 +1,63 @@
+<script id="mini_game_order_summary_template" type="text/template">
+    <div id="order_summary">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>订单管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_content">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">应用</label>
+                                            <div class="col-md-2"> 
+											<select   class="form-control type-select">
+
+                                            </select>
+											</div>
+                                            
+                                            <div class="col-md-3"><input type="text"  placeholder="下注时间段" name="dates" class="form-control bet-time"></div>
+                                            <label class="col-md-1 control-label">用户</label>
+                                            <div class="col-md-1">
+                                                <select class="form-control user-select">
+                                                    <option value="1" select>UID</option>
+                                                    <option value="0">账号</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2"><input type="text" class="form-control user-msg"/></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="clearfix">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div> 
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                                <div class="blank"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        
+    </div>
+</script>

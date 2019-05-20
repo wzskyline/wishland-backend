@@ -1,0 +1,190 @@
+<script id="sgl818_member_manage_template" type="text/template">
+    <div id="sgl818_member_manage">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>会员管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="clearfix">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group menu_form">
+
+                                            <label class="col-md-1 control-label">品牌</label>
+                                            <div class="col-md-1" >
+                                                <select class="form-control type-select" name="inquireType">
+                                                    <option value="0">香格里拉</option>
+                                                    <option value="0">2000cai</option>
+                                                </select>
+                                            </div>
+
+                                            <label class="col-md-1 control-label">用户</label>
+                                            <div class="col-md-1"><input type="text" class="form-control"/></div>
+
+                                             <label class="col-md-1 control-label">注册日期</label>
+                                            <div class="col-md-3">
+                                                <input type="text" name="dates"  placeholder="注册日期查询" class="form-control pull-right">
+                                            </div>
+
+                                            <label class="col-md-1 control-label" >状态</label>
+                                            <div class="col-md-1" >
+                                                <select class="form-control type-select" name="">
+                                                    <option value="0">在线</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>会员管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>新增会员</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Text<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 新增:end -->
+        
+        <!-- 修改:start -->
+        <div page="modify">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>会员管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>修改会员</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Text<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 修改:end -->
+        
+        <!-- 設定modal:start -->
+        <div class="config_modal modal fade" role="dialog">
+            <div class="modal-dialog" style="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">設定</h4>
+                    </div>
+                    <div class="modal-body" style=""></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 設定modal:end -->
+        
+        <!-- 說明modal:start -->
+        <div class="support_modal modal fade" role="dialog">
+            <div class="modal-dialog" style="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">说明</h4>
+                    </div>
+                    <div class="modal-body" style=" overflow: scroll;"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 說明modal:end -->
+    </div>
+</script>

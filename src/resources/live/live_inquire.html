@@ -1,0 +1,60 @@
+<script id="live_live_inquire_template" type="text/template">
+    <div id="live_live_inquire">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>主播收益报表</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <label class="col-md-1 control-label">日期</label>
+                                        <div class="col-md-3">
+                                            <input type="text" name="dates"  placeholder="日期查询" class="form-control pull-right">
+                                        </div>
+                                        <label class="col-md-1 control-label">账号查询</label>
+                                        <div class="col-md-2">
+                                            <select class="form-control type-select" data-name="modeList"> </select>
+                                        </div>
+                                        <label class="col-md-1 control-label">品牌</label>
+                                        <div class="col-md-2">
+                                            <select class="form-control type-select" name="">
+                                                <option value="sgl818">香格里拉</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <!--&lt;!&ndash; alert_message &ndash;&gt;-->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!--&lt;!&ndash; alert_message &ndash;&gt;-->
+                                </div>
+                                <hr>
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+
+        <!-- <div class="waitingForDev">主播查询(待开发)</div> -->
+    </div>
+</script>

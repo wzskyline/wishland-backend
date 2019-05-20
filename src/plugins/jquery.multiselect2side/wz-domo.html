@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>Senamion.com - multiselect2side (multiple select double side) plugin: documentation and demo page</title>
+	<link rel="stylesheet" href="css/jquery.multiselect2side.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/jquery.multiselect2side.js" ></script>
+	<script type="text/javascript">
+		$().ready(function() {
+		str =""
+		        str +="<option value='1' seleted>Option A 1 - India</option>"
+				str +="	<option value='2' seleted>Option B 2 - Italy</option>"
+				str +="<option value='3' seleted>Option C 3 - USA</option>"
+		
+		 	$('#searchable').append(str)
+			$('#searchable').multiselect2side({
+				search: "可选项",
+				labeldx: '已有项',
+			});
+			 
+			 
+		});
+		
+		//**$(this).parent().prevAll("select:first").toggle();
+		//$("#ms2side__dx").val();
+//$("#ms2side__dx option").each( function(){console.log($(this).val())});
+	</script>
+
+
+
+
+</head>
+<body>
+
+				 
+				<select   id='searchable' multiple='multiple' >
+					
+					 
+                   </select>
+ 
+				 
+
+</body>
+</html>

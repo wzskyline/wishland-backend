@@ -1,0 +1,357 @@
+<script id="mini_game_topic_deploy_template" type="text/template">
+    <div id="topic_deploy">
+      <!-- 查詢:start -->
+      <div page="inquire" class="active">
+
+        <div class="page-title">
+            <div class="title_left">
+                <h3>题目配置</h3>
+            </div>
+            <div class="title_right">
+                <div class="pull-right">
+                    <a class="btn btn-app add_button"><i class="fa fa-plus"></i>新增</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="page-content">
+            <div class="clearfix">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_content">
+                            
+                            <div class="clearfix">
+                                <!-- alert_message -->
+                                <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                <!-- alert_message -->
+                            </div> 
+                            <table id="jqGrid"></table>
+                            <div id="jqGridPager"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blank"></div>
+        </div>
+    </div>
+    <!-- 查詢:end -->
+        <!-- 新增:start -->
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>题目管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+             <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>新增题目</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"> 类型</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select   class="form-control type-select">
+
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">题图 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="file"   id="img" name="file" class="form-control img"> 
+											<span class="img-tips"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">描述</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea    class="form-control title" rows="5" maxlength="150" placeholder="Textarea"></textarea>
+											<span class="title-tips"></span>
+                                        </div>
+                                    </div>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">答案</label>
+                                    <div class="form-group"> <span class="answer-tips"></span></div>
+									<div class="add-answer-area">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">A</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"  name="add-answer"   maxlength="50"  class="form-control  answer-a">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">B</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   name="add-answer"   maxlength="50"  class="form-control  answer-b">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">C</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   name="add-answer"   maxlength="50"  class="form-control  answer-c">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">D</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   name="add-answer"  maxlength="50"  class="form-control answer-d">
+                                        </div>
+                                    </div>
+									 </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-3">开始时间</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   class="form-control start-time">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-3">截止时间 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"  class="form-control end-time">
+											<span class="time-tips"></span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">发布至品牌</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <label><input type="checkbox"    class="flat all"> 全选</label><span class="checkbox-tips"></span>
+                                            <div class="checkbox add-checkbox">
+
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="add-return-tips"></span>
+                                </form>
+                                <div class="blank"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 新增:end -->
+
+
+        <!-- 再度编辑:start -->
+        <div page="edit">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>题目管理</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>编辑题目</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12"> 类型</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <select   class="form-control edit-type-select">
+
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">题图 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                            <input type="file"   id="edit-img" name="file" class="form-control edit-img">
+											<span class="edit-img-tips"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">描述</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea    class="form-control edit-title" rows="5" maxlength="150" placeholder="Textarea"></textarea>
+											<span class="edit-title-tips"></span>
+                                        </div>
+                                    </div>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">答案</label>
+                                    <div class="form-group"> 		<span class="edit-answer-tips"></span></div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">A</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"  name="edit-answer"   maxlength="50"  class="form-control  edit-answer-a">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">B</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   name="edit-answer"  maxlength="50"  class="form-control  edit-answer-b">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">C</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   name="edit-answer"   maxlength="50"  class="form-control  edit-answer-c">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">D</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   name="edit-answer"    maxlength="50"  class="form-control edit-answer-d">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-3">开始时间</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"   class="form-control edit-start-time">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-3">截止时间 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text"  class="form-control edit-end-time">
+											<span class="edit-time-tips"></span>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">发布至品牌</label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <label><input type="checkbox"    class="flat all"   > 全选</label>
+																	<span class="edit-checkbox-tips"></span>
+                                            <div class="checkbox edit-checkbox">
+
+                     
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="edit-return-tips"></span>
+                                </form>
+                                <div class="blank"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 再度编辑:end -->
+
+
+        <!-- 开奖:start -->
+        <div page="modify">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>开奖</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>开奖</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">类型 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <span class="type-msg"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">描述 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <span class="title-msg"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group ">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">答案 </label>
+                                       <div class="answers-area">
+                                         
+                                        
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">截止时间 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <span class="end-time-msg" ></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">备注 </label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <textarea   class="form-control mark-msg" rows="5" maxlength="150" placeholder="Textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <span>手动开奖需谨慎，需2人以上确认过结果后，才可开奖。</span>
+                                    <span class="prize-return-tips"></span>
+
+                                    <div class="ln_solid"></div>
+                                </form>
+                                <div class="blank"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 开奖:end -->
+
+        
+    </div>
+</script>

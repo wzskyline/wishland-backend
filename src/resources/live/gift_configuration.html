@@ -1,0 +1,238 @@
+<script id="live_gift_configuration_template" type="text/template">
+    <div id="live_gift_configuration">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>礼物配置</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app add_button" data-permissions="giftAdd"><i class="fa fa-plus"></i>新增</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">品牌</label>
+                                            <div class="col-md-2">
+                                                <select class="form-control type-select" name="inquireType">
+                                                    <option value="0">香格里拉</option>
+                                                    <option value="1">2000cai</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                                <hr>
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>礼物配置</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>新增等级</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <div class="add_form">
+                                    <h3>基本配置</h3>
+                                    <form class="form-horizontal form-label-left"  id="uploadForm" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">类型：</label>
+                                            <div class="col-md-6">
+                                                <select class="form-control type-select" name="inquireType">
+                                                    <option value="0">未知类型1</option>
+                                                    <option value="1">未知类型2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">等级：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="请输入等级" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">icon：</label>
+                                            <div class="col-md-6">
+                                                <div class="img-box">
+                                                    <img src="data:image/jpeg;base64,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" data-name="img">
+                                                </div>
+                                            </div>
+                                            <div class="file-box">
+                                                <i>200*200</i>
+                                                <input type="file" id="file" name="pic[]"  multiple="multiple" >
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">参数：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="请输入等级参数" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">价格(直播币)：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="请输入价格" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">价格(真钱)：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="请输入价格" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">添加时间：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="这部分写JS的时候，自动生成" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group submit">
+                                            <span class="btn btn-primary" data-name="submit">提交</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 新增:end -->
+
+        <!-- 修改:start -->
+        <div page="modify">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>礼物配置</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>修改等级</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="">
+                                <div class="add_form">
+                                    <h3>基本配置</h3>
+                                    <form class="form-horizontal form-label-left"  id="" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">礼物名称：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="请输入礼物名称" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">icon：</label>
+                                            <div class="col-md-6">
+                                                <div class="img-box">
+                                                    <img src="data:image/jpeg;base64,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" data-name="img">
+                                                </div>
+                                            </div>
+                                            <div class="file-box">
+                                                <i>200*200</i>
+                                                <input type="file"  name="pic[]"  multiple="multiple" >
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">等级：</label>
+                                            <div class="col-md-6">
+                                                <select class="form-control type-select" name="inquireType">
+                                                    <option value="0">普通</option>
+                                                    <option value="1">中级</option>
+                                                    <option value="2">高级</option>
+                                                    <option value="3">豪华</option>
+                                                    <option value="4">特殊</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">价格(直播币)：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="请输入价格" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">价格(真钱)：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="请输入价格" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">添加时间：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" placeholder="这个部分写JS的时候，自动生成" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group submit">
+                                            <span class="btn btn-primary" data-name="submit">提交</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 修改:end -->
+    </div>
+</script>

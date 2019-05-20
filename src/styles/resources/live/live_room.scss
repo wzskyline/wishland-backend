@@ -1,0 +1,546 @@
+@import "compass/css3";
+
+#live_live_room {
+
+    .active_live_page {
+        display: block !important;
+    }
+
+    .page-content {
+        height: calc(100% - 85px) !important;
+    }
+
+    .nav {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        border-top: 1px solid #ddd;
+
+        ul {
+            li {
+                display: block;
+                padding: 0 10px;
+                float: left;
+                cursor: pointer;
+
+                &.active,
+                &:hover {
+                    font-weight: bold;
+                    color: #0ba3f7;
+                }
+            }
+        }
+    }
+
+    .live_content {
+        max-width: 1649px;
+        min-width: 1619px;
+        width: 100%;
+        height: 80%;
+        padding-bottom: 30px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: auto;
+        display: none;
+
+        .ive_room_header {
+            width: 100%;
+            height: 128px;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-right: 22px;
+            border-bottom: 1px solid #ddd;
+
+            .user_img {
+                min-width: 100px;
+                min-height: 100px;
+                max-width: 154px;
+                max-height: 106px;
+                float: left;
+                margin-top: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .user_message {
+                width: 230px;
+                height: 106px;
+                float: left;
+                margin-left: 12px;
+                margin-top: 10px;
+
+                span {
+                    display: block;
+                    line-height: 26px;
+                    font-size: 14px;
+                }
+            }
+
+            .user_operating {
+                float: left;
+                width: 300px;
+                height: 100%;
+
+                .operating {
+                    float: left;
+                    width: 100px;
+                    height: 100px;
+                    text-align: center;
+                    margin: 0 16px;
+                    margin-top: 10px;
+
+                    span {
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        border: 4px solid #bbb;
+                        border-radius: 50%;
+                        position: relative;
+                        cursor: pointer;
+
+                        &.start::after {
+                            width: 0;
+                            height: 0;
+                            content: '';
+                            display: block;
+                            border: 10px solid transparent;
+                            border-left-color: #bbb;
+                            margin-left: 8px;
+                            margin-top: 1px;
+                            border-radius: 3px;
+                        }
+
+                        &.stop:after {
+                            width: 3px;
+                            height: 16px;
+                            display: inline-block;
+                            margin-left: 4px;
+                            content: '';
+                            background-color: #bbb;
+                        }
+
+                        &.stop:before {
+                            width: 3px;
+                            height: 16px;
+                            display: inline-block;
+                            margin-top: 3px;
+                            content: '';
+                            background-color: #bbb;
+                        }
+
+                        &.active,
+                        &:hover {
+                            @include transform(scale(1.03));
+                        }
+
+                        &.active {
+                            border-color: #0ba3f7;
+
+                            &:after {
+                                border-left-color: #0ba3f7;
+                            }
+
+                            &:before {
+                                background-color: #0ba3f7;
+                            }
+                        }
+                    }
+
+                    [data-name='stop'] {
+                        &.active {
+                            border-color: #0ba3f7;
+
+                            &:after,
+                            &:before {
+                                background-color: #0ba3f7;
+                            }
+                        }
+                    }
+
+                    p {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .live_room_body {
+            width: 1630px;
+            height: auto;
+            padding: 20px 0;
+
+            .left_live {
+                width: 400px;
+                height: 400px;
+                float: left;
+                background-color: gainsboro;
+                margin-left: 30px;
+                border-radius: 3px;
+                position: relative;
+                left: 0;
+                top: 0;
+                overflow: hidden;
+
+                &.active {
+                    background-color: #0ba3f7;
+                }
+
+                .vjs-poster {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-size: 100% 100%;
+                    display: none;
+                }
+            }
+
+            .right_message {
+                width: 1180px;
+                height: auto;
+                float: left;
+                border-left: 1px solid #ddd;
+                padding-left: 30px;
+                margin-left: 20px;
+
+                .live_message {
+                    width: 100%;
+                    height: 130px;
+                    border-radius: 3px;
+                    overflow: hidden;
+
+                }
+
+                .audience_body {
+                    width: 100%;
+                    height: auto;
+                    margin-top: 10px;
+
+                    h3 {
+                        font-size: 14px;
+                    }
+
+                    .audience_list {
+                        width: 256px;
+                        height: auto;
+                        float: left;
+                        margin-left: 10px;
+                        border: 1px solid #ddd;
+                        overflow: hidden;
+                        border-radius: 3px;
+
+                        h3 {
+                            width: 100%;
+                            height: 40px;
+                            line-height: 40px;
+                            color: #fff;
+                            padding-left: 10px;
+                            background-color: rgb(11, 163, 247);
+
+                            span {
+                                float: right;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .list {
+                            width: 100%;
+                            height: 404px;
+                            overflow: auto;
+
+                            ul {
+
+                                li {
+                                    width: 100%;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    padding-left: 10px;
+                                    position: relative;
+                                    margin-top: 6px;
+
+                                    strong {
+                                        font-weight: bold;
+                                        margin: 0 4px;
+                                        font-size: 13px;
+                                        color: #1fa6fd;
+                                    }
+
+                                    i {
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .table-box {
+        position: relative;
+        width: 805px;
+        border: 1px solid #E6E9ED;
+        margin: 0 auto;
+
+        .table-header {
+            &.padding_right {
+                padding-right: 17px;
+            }
+        }
+
+        .table-body {
+            height: 450px;
+            overflow: auto;
+            padding-bottom: 10px;
+        }
+
+        table {
+            border: none;
+
+            tbody {
+                tr {
+                    td {
+                        border-left: none;
+                        overflow: hidden;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .audience_message {
+        float: left;
+        width: 872px;
+        height: 444px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        overflow: hidden;
+
+        .title {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            padding-left: 10px;
+            background-color: rgb(255, 152, 0);
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        .message_content {
+            width: 100%;
+            height: 404px;
+            overflow: auto;
+
+            ul {
+                padding-bottom: 10px;
+
+                li {
+                    width: 100%;
+                    height: 30px;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    position: relative;
+                    margin-top: 6px;
+
+                    // 入场
+                    &.goInit {
+                        @include background(linear-gradient(-270deg, rgba(243, 230, 185, 0.8) 0%, rgba(249, 250, 244, 0.9) 70%));
+
+                        .init_img {
+                            display: block;
+                        }
+                    }
+
+                    // 升级
+                    &.update {
+                        @include background(linear-gradient(-270deg, rgba(251, 175, 10, 0.8) 0%, rgba(250, 100, 199, 0.9) 90%));
+                        color: #fff;
+                    }
+
+                    // 送歌
+                    &.song {
+                        @include background(linear-gradient(-270deg, rgba(80, 224, 191, 0.8) 0%, rgba(111, 136, 227, 0.9) 90%));
+                        color: #fff;
+                    }
+
+                    &.announcement {
+                        @include background(linear-gradient(-270deg, rgba(251, 175, 10, 0.8) 0%, rgba(250, 100, 199, 0.9) 90%));
+                        color: #fff;
+                    }
+
+                    time, strong, span {
+                        font-size: 13px;
+                    }
+
+                    time {
+                        margin-right: 4px;
+                    }
+
+                    strong {
+                        font-weight: bold;
+                        color: #1fa6fd;
+
+                        &.active {
+                            margin: 0 4px;
+                        }
+                    }
+
+                    i {
+                        display: inline-block;
+                        vertical-align: sub;
+                        margin: 0 2px;
+                    }
+
+                    .init_img {
+                        width: 32px;
+                        height: 32px;
+                        display: none;
+                        position: absolute;
+                        right: 20px;
+                        top: 0;
+
+                        img {
+                            width: 53px;
+                            height: 53px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin-left: -26.5px;
+                            margin-top: -26.5px;
+                        }
+                    }
+
+                    .gift {
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        position: relative;
+                        vertical-align: top;
+
+                        img {
+                            width: 24px;
+                            height: 27px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            margin-left: -12px;
+                            margin-top: -13.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 事件框
+    .message_content {
+        width: 572px;
+        height: 100%;
+        float: left;
+
+        &:nth-child(2) {
+            .title {
+                background-color: rgb(255, 64, 129);
+            }
+
+        }
+
+        .title {
+            width: 30px;
+            height: 100%;
+            float: left;
+            display: table;
+            background-color: rgb(0, 150, 136);
+
+            .title_content {
+                display: table-cell;
+                text-align: center;
+                vertical-align: middle;
+
+                span {
+                    width: 26px;
+                    display: block;
+                    font-size: 14px;
+                    margin: 0 auto;
+                    color: #fff;
+                    line-height: 20px;
+
+                }
+            }
+        }
+
+        .content {
+            float: left;
+            width: 538px;
+            height: 100%;
+            border: 1px solid #ddd;
+
+            .left_content,
+            .right_content {
+                float: left;
+                width: 100%;
+                height: 100%;
+                border-right: 1px solid #ddd;
+                overflow: auto;
+                padding-left: 10px;
+
+                &:nth-child(2) {
+                    border-right: none;
+                }
+
+                ul {
+
+                    li {
+                        margin-top: 6px;
+
+                        time, strong, span {
+                            font-size: 13px;
+                        }
+
+                        strong {
+                            font-weight: bold;
+                            margin-left: 12px;
+                            margin-right: 4px;
+                            color: #1fa6fd;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &.giftGiving {
+            float: right;
+
+            .content {
+                border: none;
+
+                .left_content {
+                    width: 267px;
+                    float: left;
+                }
+
+                ul {
+                    padding-left: 36px;
+
+                    i {
+                        font-style: normal;
+                    }
+                }
+            }
+        }
+    }
+
+}

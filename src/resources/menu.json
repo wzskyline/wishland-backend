@@ -1,0 +1,155 @@
+﻿[{
+    "title": "一般",
+    "type": "ordinary",
+    "menu": [{
+        "clazz": "fa fa-home",
+        "text": "香格里拉",
+        "sub_menu": [{
+                "text": "會員管理",
+                "href": "#/sgl818_member_manage"
+            },
+            {
+                "text": "意见反馈",
+                "href": "#/sgl818_suggestions"
+            },
+            {
+                "text": "平台消息推送",
+                "href": "#/sgl818_announcement"
+            }
+        ]
+    }, {
+        "clazz": "fa fa-support",
+        "text": "彩票",
+        "sub_menu": [{
+            "text": "訂單查詢",
+            "href": "#/lwa_order_inquire"
+        }]
+    }, {
+        "clazz": "fa fa-gamepad",
+        "text": "小遊戲",
+        "sub_menu": [{
+                "text": "数据概览",
+                "href": "#/mini_game_data_summary"
+            },
+            {
+                "text": "用户管理",
+                "href": "#/mini_game_member_manage"
+            },
+            {
+                "text": "题目配置",
+                "href": "#/mini_game_topic_deploy"
+            },
+            {
+                "text": "订单查询",
+                "href": "#/mini_game_order_summary"
+            },
+            {
+                "text": "账变查询",
+                "href": "#/mini_game_transactions"
+            }
+        ]
+
+    }, {
+        "clazz": "fa fa-cc",
+        "text": "带打系统",
+        "sub_menu": [{
+                "text": "带打师列表",
+                "href": "#/game_playing_masters"
+            },
+            {
+                "text": "用户列表",
+                "href": "#/game_playing_users"
+            },
+            {
+                "text": "历史战绩",
+                "href": "#/game_playing_history"
+            },
+            {
+                "text": "排行榜",
+                "href": "#/game_playing_rank"
+            },
+            {
+                "text": "客服联系方式",
+                "href": "#/game_playing_wechater"
+            }
+        ]
+    }, {
+        "clazz": "fa fa-desktop",
+        "text": "直播管理",
+        "sub_menu": [{
+                "text": "主播列表",
+                "href": "#/live_live_list"
+            },
+            {
+                "text": "直播会员统计",
+                "href": "#/live_member_statistics"
+            },
+            {
+                "text": "会员等级配置",
+                "href": "#/live_member_configuration"
+            },
+            {
+                "text": "礼物配置",
+                "href": "#/live_gift_configuration"
+            },
+            {
+                "text": "主播房间",
+                "href": "#/live_live_room"
+            },
+            {
+                "text": "场控管理",
+                "href": "#/live_live_control"
+            },
+            {
+                "text": "主播收益报表",
+                "href": "#/live_live_inquire"
+            },
+            {
+                "text": "刷礼物记录",
+                "href": "#/live_gift_recording"
+            },
+            {
+                "text": "直播状态查询",
+                "href": "#/live_live_monitor"
+            },
+            {
+                "text": "主播状态监控",
+                "href": "#/live_live_status_monitor"
+            },
+            {
+                "text": "直播公告管理",
+                "href": "#/live_announcement_management"
+            }
+        ]
+    }]
+}, {
+    "title": "系統",
+    "type": "admin",
+    "menu": [{
+        "clazz": "fa fa-user",
+        "text": "用戶管理",
+        "sub_menu": [{
+            "text": "系统用户设置",
+            "href": "#/system_syscount_manage"
+        }]
+    }, {
+        "clazz": "fa fa-users",
+        "text": "用户组管理",
+        "sub_menu": [{
+            "text": "用户组管理",
+            "href": "#/system_role_manage"
+        }]
+    }, {
+        "clazz": "fa fa-book",
+        "text": "权限管理",
+        "sub_menu": [{
+                "text": "权限管理",
+                "href": "#/system_permission_manage"
+            },
+            {
+                "text": "权限组管理",
+                "href": "#/system_permission_group_manage"
+            }
+        ]
+    }]
+}]

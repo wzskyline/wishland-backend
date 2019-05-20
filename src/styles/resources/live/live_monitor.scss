@@ -1,0 +1,88 @@
+@import "compass/css3";
+
+#live_live_monitor{
+    .x_panel{ padding-bottom: 50px; }
+    .room_tabs {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #E6E9ED;
+        padding: 10px 0;
+
+        li{
+            width: auto;
+            height: 30px;
+            line-height: 30px;
+            display: inline-block;
+            padding: 0 10px;
+            @include border-radius(4px);
+            background-color: #b7b4b4;
+            color: #fff;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &.active{
+                background-color: #009688;
+            }
+        }
+    }
+
+     .live_body{
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+
+        .left_live_content{
+            width: 100%;
+            height: auto;
+    
+            .live_user{
+                width: 100%;
+                height: auto;
+                border-bottom: 1px solid #E6E9ED;
+
+                .user_img{
+                    width: 154px;
+                    height: auto;
+                    float: left;
+
+                    img{
+                        width: 154px;
+                        height: 106px;
+                    }
+
+                   .modelUser {
+                        width: 100%;
+                        height: 30px;
+                        line-height: 30px;
+                        font-size: 16px;
+
+                        span { color: #0ba3f7; }
+                    }
+                }
+
+                .user_message{
+                    width: 300px;
+                    height: 100%;
+                    float: left;
+                    margin-left: 60px;
+
+                    span{
+                        width: 118px;
+                        display: inline-block;
+                        line-height: 26px;
+                        font-size: 14px;
+                        
+                        &:nth-child(2){
+                            color: #0ba3f7;
+                        }
+                    }
+                }
+
+            }
+
+            .formContent{
+                 margin-top: 20px;
+            }
+        }
+    }
+}

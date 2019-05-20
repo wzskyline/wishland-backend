@@ -1,0 +1,44 @@
+{
+  "name": "wishland-backend",
+  "version": "1.1.4",
+  "description": "",
+  "main": "gulpfile.local.js",
+  "scripts": {
+    "start": "gulp --gulpfile gulpfile.local.js",
+    "template": "gulp --gulpfile gulpfile.local.js template",
+    "dev": "gulp --gulpfile gulpfile.dev.js",
+    "sit": "gulp --gulpfile gulpfile.sit.js",
+    "clean": "gulp --gulpfile gulpfile.local.js clean"
+  },
+   
+  "license": "ISC",
+  "devDependencies": {
+    "compass-mixins": "^0.12.10",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.5.0",
+    "gulp-copy": "^1.0.0",
+    "gulp-css-base64": "^1.3.4",
+    "gulp-data": "^1.3.1",
+    "gulp-ejs": "^3.1.3",
+    "gulp-html-extend": "^1.1.6",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-if": "^2.0.2",
+    "gulp-import-tasks": "^0.1.1",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-string-replace": "^0.4.0",
+    "gulp-template": "^5.0.0",
+    "gulp-testcafe": "^0.9.2",
+    "gulp-uglify": "^3.0.0",
+    "testcafe-reporter-phil": "^1.0.2"
+  },
+  "dependencies": {
+    "npm": "^6.1.0"
+  }
+}

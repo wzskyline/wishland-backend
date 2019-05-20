@@ -1,0 +1,140 @@
+<script id="sgl818_announcement_template" type="text/template">
+    <div id="sgl818_announcement">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>平台消息推送</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <!--<a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>-->
+                        <a class="btn btn-app add_button"><i class="fa fa-plus"></i>新增公告</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                                <div style="text-align: center;font-size: 30px;font-weight: bold;">【公告列表】待开发，【新增公告】可以使用</div>
+                            <!-- <div class="x_content">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">时间</label>
+                                            <div class="col-md-3">
+                                                <input type="text" name="dates"  placeholder="日期查询" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                </div>
+                                <hr>
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>平台公告发布</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>新增公告</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                   <div class="formBox">
+                                        <div class="heard">新增公告</div>
+                                        <div class="body">
+                                            <!-- <div class="form-group">
+                                                <label class="col-md-3 control-label">发布人：</label>
+                                                <div class="col-md-6" style="width: 126px;">
+                                                    <select class="form-control type-select" data-name="adminName">
+                                                        <option value="jacktest@sgl818">管理员</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">公告内容：</label>
+                                                <div class="col-md-6">
+                                                    <textarea empty="true" style="width:834px;height:300px;resize: none" data-name="textarea"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">发送类型：</label>
+                                                <div class="col-md-6" style="width: 160px;">
+                                                    <select class="form-control type-select" data-name="announcement_type">
+                                                        <option value="PLATFORM_NEWS.ANNOUNCEMENT">平台公告</option>
+                                                        <option value="MODEL_OPEN_SHOW.ANNOUNCEMENT">主播公告</option>
+                                                        <option value="PROMOTION_NEWS.ANNOUNCEMENT">活动公告</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">紧急度：</label>
+                                                <div class="col-md-6" style="width: 160px;">
+                                                    <select class="form-control type-select" data-name="grade">
+                                                        <option value="0">一般</option>
+                                                        <option value="1">紧急</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="form-group">
+                                                <label class="col-md-3 control-label">发送时间：</label>
+                                                <input type="text" name="start_time"  readonly="readonly" placeholder="选择开始时间" class="time_input" />
+                                                <input type="text" name="end_time" readonly="readonly" placeholder="选择结束时间" class="time_input" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">发送条件：</label>
+                                                <div class="col-md-6" style="width: 160px;">
+                                                    <select class="form-control type-select" data-name="">
+                                                        <option value="">每次登入后</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
+                                            <div class="form-group">
+                                                <button class="btn btn-primary " data-name="release_buttom" style="width: 168px;margin: 25px;" data-loading-text="处理中...">发布公告</button>
+                                            </div>
+                                        </div>
+                                   </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 新增:end -->
+    </div>
+</script>

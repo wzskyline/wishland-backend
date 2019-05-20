@@ -1,0 +1,55 @@
+@import "compass/css3";
+.rols-page-span{
+    margin-left: 50px;
+    width:300px; 
+    color: black;
+    font-size: 25px;
+}
+.op{
+    height: 30px;
+    border-radius: 8px;
+}
+.font20{
+    font-size: 20px;
+}
+.ncinput{
+    margin-left: 3px;
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 5px;
+}
+.rols-page-span2{
+    color: blue;
+    font-size: 25px;
+}
+.ms2side__div{
+    margin-left: 50px;
+}
+.ms2side__header{
+    font-size: 20px;
+    height: 30px;
+    background-color: #FFF;
+    input{
+        height: 20px;
+        width: 130px;
+        font-size: 10px;
+        margin-left: 15px;
+        margin-top: 5px;
+        border: 1px solid rgb(201, 206, 209)
+    }
+    a{
+        height: 0px;
+        width: 0px;
+        padding: 0 0px 0px 0px;
+        background-color: #fff;
+        border-color: #fff;
+    }
+}
+.ms2side__options{
+    margin-top: 60px;
+}
+.ms2side__div select {
+    width: 220px;
+    height: 150px;
+    float: left;
+}

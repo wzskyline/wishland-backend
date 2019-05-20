@@ -1,0 +1,270 @@
+<script id="live_live_list_template" type="text/template">
+    <div id="live_live_list">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>主播列表</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app add_button" data-permissions="list_add"><i class="fa fa-plus"></i>新增</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="">
+
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group border border-warning">
+                                            <label class="col-md-1 control-label">品牌</label>
+                                            <div class="col-md-2">
+                                                <select class="form-control type-select" name="merchant">
+                                                    <option value="sgl818">香格里拉</option>
+                                                    <option value="2000cai">香格里拉</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <ul class="nav navbar-nav" data-name="live_type">
+                                    <li class="active" data-type="list"><a href="javascript:;">主播列表</a></li>
+                                    <li data-type="time" data-permissions="time_view"><a href="javascript:;">直播时间</a></li>
+                                </ul>
+
+                                <div class="row">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                                <hr>
+                                <div data-name="jqGrid_list">
+                                    <table id="jqGrid_list"></table>
+                                    <div id="jqGridPager_list"></div>
+                                </div>
+                                <div data-name="jqGrid_time">
+                                    <table id="jqGrid_time"></table>
+                                    <div id="jqGridPager_time"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>主播列表</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>新增主播</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="">
+                                <div class="add_form" data-name="add_form">
+                                    <h3>基本配置</h3>
+                                    <form class="form-horizontal form-label-left"  id="uploadForm" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">主播账号：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="userKey" placeholder="m.test" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">主播密码：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="password" placeholder="默认密码为a123456" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">TCG主播ID：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="TCG_mode_id" placeholder="请输入TGC主播ID" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">主播昵称：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="nickName" placeholder="请输入主播昵称" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">主播简介：</label>
+                                            <div class="col-md-6">
+                                                <textarea empty="true" data-name="introText" style="width: 230px;height: 92px;" data-name="textarea"></textarea>
+                                            </div>
+                                        </div> 
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">身高：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="height" class="form-control" style="width: 52px;display: inline-block;margin-right: 10px;">cm
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="col-md-3 control-label">体重：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="width" class="form-control" style="width: 52px;display: inline-block;margin-right: 10px;">kg
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">三围：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="size" placeholder="32c 26 36，以空格分开" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group submit">
+                                            <span class="btn btn-primary" data-name="submit">提交</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新增:end -->
+
+         <!-- 修改:start -->
+         <div page="modify">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>主播列表</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>编辑主播</h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="">
+                                <div class="modify_form" data-name="modify_form">
+                                    <h3>修改内容</h3>
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">主播账号：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="userKey" disabled="disabled" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">TCG主播ID：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="TCG_mode_id"  class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">主播简介：</label>
+                                            <div class="col-md-6">
+                                                <textarea empty="true" data-name="introText" style="width: 230px;height: 92px;" data-name="textarea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">身高：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="height" class="form-control" style="width: 52px;display: inline-block;margin-right: 10px;">cm
+                                            </div>
+                                        </div>
+                                         <div class="form-group">
+                                            <label class="col-md-3 control-label">体重：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="width" class="form-control" style="width: 52px;display: inline-block;margin-right: 10px;">kg
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">生日：</label>
+                                            <div class="col-md-6">
+                                                <div id="birthday_container" class="datedropDown">
+                                                    <div class=""> 
+                                                        <select name="year" onmousedown="if(this.options.length>20){this.size=20}" onblur="this.size=0" onchange="this.size=0"></select>
+                                                    </div>
+                                                    <i>年</i>
+                                                    <div class=""> 
+                                                        <select name="month" onmousedown="if(this.options.length>20){this.size=20}" onblur="this.size=0" onchange="this.size=0"></select>
+                                                    </div>
+                                                    <i>月</i>
+                                                    <div class=""> 
+                                                        <select name="day"  onmousedown="if(this.options.length>20){this.size=20}" onblur="this.size=0" onchange="this.size=0"></select>
+                                                    </div>
+                                                    <i>日</i>
+                                                </div>     
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">星座：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="starSign" class="form-control" style="width: 120px;display: inline-block;margin-right: 10px;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">兴趣爱好：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="interests" class="form-control" style="width: 120px;display: inline-block;margin-right: 10px;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">所在地：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="location" class="form-control" style="width: 120px;display: inline-block;margin-right: 10px;">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">三围：</label>
+                                            <div class="col-md-6">
+                                                <input type="text" data-name="size" placeholder="32c 26 36，以空格分开" class="form-control pull-right">
+                                            </div>
+                                        </div>
+                                        <div class="form-group submit">
+                                            <span class="btn btn-primary" data-name="submit">提交</span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 修改:end -->
+    </div>
+</script>

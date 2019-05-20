@@ -1,0 +1,68 @@
+<script id="live_gift_recording_template" type="text/template">
+    <div id="live_gift_recording">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>刷礼物记录</h3>
+                </div>
+                <div class="pull-right">
+                    <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                    <a class="btn btn-app export_button"><i class="glyphicon glyphicon-open"></i>导出</a>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="clearfix">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <label class="col-md-1 control-label">玩家帐号：</label>
+                                        <div class="col-md-2" style="width: 160px;"><input type="text" class="form-control" data-name="userId"/></div>
+
+                                        <label class="col-md-1 control-label">礼物名称：</label>
+                                        <div class="col-md-2" style="width: 160px;">
+                                            <select class="form-control type-select" data-name="giftList">
+                                                <option value="0">法拉利</option>
+                                                <option value="0">火箭</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label">主播账号：</label>
+                                        <div class="col-md-2" style="width: 222px;">
+                                            <select class="form-control type-select" data-name="modeList">
+                                                <option value="0">live123-露露</option>
+                                                <option value="1">live124-娜娜</option>
+                                            </select>
+                                        </div>
+
+                                        <label class="col-md-1 control-label">日期</label>
+                                        <div class="col-md-3">
+                                            <input type="text" name="dates"  placeholder="日期查询" class="form-control pull-right">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                                <hr>
+                               <div id="export">
+                                    <table id="jqGrid"></table>
+                               </div>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+    </div>
+</script>

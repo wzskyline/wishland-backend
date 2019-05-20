@@ -1,0 +1,166 @@
+<script id="live_live_control_template" type="text/template">
+    <div id="live_live_control" >
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>场面管控</h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button hide"><i class="fa fa-search"></i>查询</a>
+                        <a class="btn btn-app excle hide"><i class="glyphicon glyphicon-open"></i>导出</a>
+                        <a class="btn btn-app open_window"><i class="fa fa-plus"></i>新建窗口</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- 导航tab -->
+            <ul class="nav_tabs">
+                <li data-type="scene_control" class="active" >场面管控</li>
+                <li data-type="operating_recording">操作记录</li>
+                <li data-type="history_recording">历史对话记录</li>
+            </ul>
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 switch-page" data-name="scene_control" style="padding-bottom: 30px;">
+                        <div class="x_panel">
+
+                            <!--  切换主播房间 -->
+                            <ul class="room_tabs" data-name="roo_tabs"> </ul>
+
+                            <!-- 视讯区 -->
+                            <div class="live_body clearfix">
+
+                                <!-- 视讯区 -->
+                                <div class="left_live_content ">
+                                    <div class="live_user clearfix">
+                                        <div class="user_img">
+                                            <img src="../../images/live/user_img.png" data-name="live_user_img" alt="主播头像">
+                                        </div>
+                                        <div class="user_message">
+                                            <span data-name="live_user_name"></span>
+                                            <span data-name="live_user_number"></span>
+                                            <span>礼物收益(直播币)：<strong data-name="game_money">---</strong></span>
+                                            <span>礼物收益(真钱)：<strong data-name="real_money">---</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="live_content" data-name="liveBox"></div>
+                                </div>
+
+                                <!-- 群众信息管理区 -->
+                                <div class="audience_message">
+                                    <div class="header">
+                                        <h3 class="">观众发言</h3>
+                                        <div class="menu">
+                                            <div class="select">
+                                                <label class="col-md-1 control-label">类型</label>
+                                                <select class="form-control type-select" name="playerMsgType">
+                                                    <option value="false">全部</option>
+                                                    <option value="true">待处理</option>
+                                                </select>
+                                            </div>
+                                            <div class="select">
+                                                <label class="col-md-1 control-label">时间</label>
+                                                <input type="text" name="dates" readonly="readonly"  placeholder="观众发言时间" class="form-control pull-right playerMsgTime">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message_content" data-name="message_content">
+                                        <ul></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 switch-page hide" data-name="operating_recording">
+                        <div class="x_panel">
+                            <div class="">
+                                <div class="clearfix">
+                                    <div class="well">
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group border border-warning">
+                                                <label class="col-md-1 control-label">帐号</label>
+                                                <div class="col-md-3">
+                                                    <input type="text" name="dates" placeholder="日期查询" class="form-control pull-right">
+                                                </div>
+
+                                                <label class="col-md-1 control-label">帐号</label>
+                                                <div class="col-md-2">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                </div>
+                                <hr>
+                                <table id="jqGrid_operating_recording"></table>
+                                <div id="jqGridPager_operating_recording"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 switch-page hide" data-name="history_recording">
+                        <div class="x_panel">
+                            <div class="">
+                                <div class="clearfix">
+                                    <div class="well">
+                                        <form class="form-horizontal form-label-left">
+                                            <div class="form-group border border-warning">
+                                                <label class="col-md-1 control-label">主播房间</label>
+                                                <div class="col-md-1">
+                                                    <select class="form-control search-live" data-name="search"></select>
+                                                </div>
+                                                <label class="col-md-1 control-label">玩家帐号</label>
+                                                <div class="col-md-2">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                                <label class="col-md-1 control-label">状态</label>
+                                                <div class="col-md-2" style="width: 113px">
+                                                    <select class="form-control  history_type" name="inquireType">
+                                                            <option value="false">全部</option>
+                                                            <option value="true">待处理</option>
+                                                    </select>
+                                                </div>
+                                                <label class="col-md-1 control-label">时间</label>
+                                                <div class="col-md-3">
+                                                    <input type="text" name="dates"   readonly="readonly"  placeholder="日期查询" class="form-control pull-right history_time">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                </div>
+                                <hr>
+                                <table id="jqGrid_history_recording"></table>
+                                <div id="jqGridPager_history_recording"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+
+        <!-- 详情 -->
+        <div class="support_modal modal fade in" role="dialog" style="display: none;">
+            <div class="modal-dialog" style="">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">账号：<span>jacktest1</span></h4>
+                    </div>
+                    <div class="modal-body" style=" overflow: scroll;">
+                        <p>66666666666666666666666666666666</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>

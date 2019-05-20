@@ -1,0 +1,174 @@
+<script id="<%= module + '_' + name %>_template" type="text/template">
+    <div id="<%= module + '_' + name %>">
+        <!-- 查詢:start -->
+        <div page="inquire" class="active">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3><%= title %></h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app search_button"><i class="fa fa-search"></i>查询</a>
+                        <% if (func.exported) { %><a class="btn btn-app exported_button"><i class="fa fa-download"></i>汇出</a><% } %>
+                        <% if (func.add) { %><a class="btn btn-app add_button"><i class="fa fa-plus"></i>新增</a><% } %>
+                        <% if (func.config) { %><a class="btn btn-app config_button"><i class="fa fa-cog"></i>设定</a><% } %>
+                        <a class="btn btn-app support_button"><i class="fa fa-support"></i>说明</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_content">
+                                <div class="well">
+                                    <form class="form-horizontal form-label-left">
+                                        <div class="form-group">
+                                            <label class="col-md-1 control-label">帐号</label>
+                                            <div class="col-md-2"><input type="text" class="form-control"/></div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <!-- alert_message -->
+                                    <div class="col-md-12 col-sm-12 col-xs-12 alert_message"></div>
+                                    <!-- alert_message -->
+                                </div>
+                                <hr>
+                                <table id="jqGrid"></table>
+                                <div id="jqGridPager"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 查詢:end -->
+        <% if (func.add) { %>
+        <!-- 新增:start -->
+        <div page="add">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3><%= title %></h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2><%= func.add.sub_title %></h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Text<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 新增:end -->
+        <% } %><% if (func.modify) { %>
+        <!-- 修改:start -->
+        <div page="modify">
+
+            <div class="page-title">
+                <div class="title_left">
+                    <h3><%= title %></h3>
+                </div>
+                <div class="title_right">
+                    <div class="pull-right">
+                        <a class="btn btn-app save_button"><i class="fa fa-save"></i>储存</a>
+                        <a class="btn btn-app back_button"><i class="fa fa-mail-reply"></i>返回</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2><%= func.modify.sub_title %></h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+                                <form class="form-horizontal form-label-left">
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Text<span class="required">*</span></label>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <input type="text" class="form-control" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="ln_solid"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 修改:end -->
+        <% } %><% if (func.config) { %>
+        <!-- 設定modal:start -->
+        <div class="config_modal modal fade" role="dialog">
+            <div class="modal-dialog" style="<%= func.config.width ? ('width:' + func.config.width + 'px') : '' %>">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"><%= func.config.sub_title %></h4>
+                    </div>
+                    <div class="modal-body" style="<%= func.config.height ? ('height:' + func.config.height + 'px;') : '' %>"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 設定modal:end -->
+        <% } %>
+        <!-- 說明modal:start -->
+        <div class="support_modal modal fade" role="dialog">
+            <div class="modal-dialog" style="<%= func.support && func.support.width ? ('width:' + func.config.width + 'px') : '' %>">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">说明</h4>
+                    </div>
+                    <div class="modal-body" style="<%= func.support && func.support.height ? ('height:' + func.config.height + 'px;') : '' %> overflow: scroll;"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 說明modal:end -->
+    </div>
+</script>
